@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>首页</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/fullpage.min.css">
+    <link type="text/css" rel="stylesheet" href="css/index.css" />
+
+	<style>
+		.fp-bg{
+			background-size: cover;
+			transform: translate3d(0,0,0);
+			-webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+            backface-visibility: hidden;
+            height: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+		}
+
+		#section2 .fp-bg{
+			background-image: url('https://alvarotrigo.com/fullPage/extensions/imgs/parallax/parallax-2.jpg');
+		}
+		#section4 .fp-bg{
+			background-image: url('https://alvarotrigo.com/fullPage/extensions/imgs/parallax/parallax-4.jpg');
+		}
+
+	</style>
+</head>
+<body>
+
+
+<div id="my">
+	<div class="section" id="section2">
+		<div class="fp-bg"></div>
+	</div>
+	<div class="section" id="section4">
+		<div class="fp-bg"></div>
+	</div>
+</div>
+<input type="hidden" id="_4" value="3" />
+
+
+<!-- END WARNING-->
+<script src="./js/jquery-1.8.3.min.js"></script>
+
+<script src="./js/limit.js"></script>
+<script src="./js/fullpage.extensions.min.js"></script>
+
+<script type="text/javascript">
+
+
+	new fullpage('#my', {
+		anchors: ['page1', 'page2', 'page3', 'page4'],
+		menu: '#menu',
+        slidesNavigation: true,
+        scrollingSpeed: 1000,
+		
+		parallax: true,
+		parallaxKey: 'YWx2YXJvdHJpZ28uY29tXzlNZGNHRnlZV3hzWVhnPTFyRQ==',
+		parallaxOptions: {
+			type: 'cover',
+			percentage: 100,
+			property: 'translate'
+		},
+		autoScrolling: false,
+		scrollBar: true,
+		fitToSection:false,
+        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
+	});
+</script>
+
+</body>
+</html>

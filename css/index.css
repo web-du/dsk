@@ -253,6 +253,12 @@
     margin-left: -30px;
     bottom:20px;
     z-index: 9;
+    cursor: pointer;
+    transform: translateX(-50%);
+    transition: all .3s cubic-bezier(.65,-.73,.46,2.1);
+}
+.down:hover{
+    transform: translate(-50%,5px);
 }
 .down img{
     display: block;

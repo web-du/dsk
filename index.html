@@ -15,7 +15,7 @@
     <link type="text/css" rel="stylesheet" href="css/ie7.css" />
     <![endif]-->
     <style>
-        #fullpage .section{
+        /* #fullpage .section{
             background-image:url("./images/img-02.jpg");
             background-repeat: no-repeat;
             background-size:cover;
@@ -37,6 +37,42 @@
             background-image:url("./images/img-07.jpg");
         }
         #fullpage .section:nth-child(7){
+            background-image:url("./images/img-08.jpg");
+        } */
+        .fp-bg{
+			background-size: cover;
+			transform: translate3d(0,0,0);
+			-webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+            backface-visibility: hidden;
+            height: 100%;
+        }
+        
+        #fullpage .section .fp-bg{
+            background-image:url("./images/img-02.jpg");
+            /* background-repeat: no-repeat; */
+            background-size:cover;
+            transform: translate3d(0,0,0);
+			-webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+            backface-visibility: hidden;
+            height: 100%;
+            background-position: center center;
+        }
+        #fullpage .section:nth-child(2) .fp-bg{
+            background-image:url("./images/img-03.jpg");
+        }
+        #fullpage .section:nth-child(3) .fp-bg{
+            background-image:url("./images/img-04.jpg");
+        }
+        #fullpage .section:nth-child(4) .fp-bg{
+            background-image:url("./images/img-05.jpg");
+        }
+        #fullpage .section:nth-child(5) .fp-bg{
+            background-image:url("./images/img-06.jpg");
+        }
+        #fullpage .section:nth-child(6) .fp-bg{
+            background-image:url("./images/img-07.jpg");
+        }
+        #fullpage .section:nth-child(7) .fp-bg{
             background-image:url("./images/img-08.jpg");
         }
     </style>
@@ -99,14 +135,29 @@
         </li>
     </ul>
     <div id="fullpage">
-        <div class="section"></div>
-        <div class="section"></div>
-        <div class="section"></div>
-        <div class="section"></div>
-        <div class="section"></div>
-        <div class="section"></div>
-        <div class="section"></div>
+        <div class="section">
+            <div class="fp-bg"></div>
+        </div>
+        <div class="section">
+            <div class="fp-bg"></div>
+        </div>
+        <div class="section">
+            <div class="fp-bg"></div>
+        </div>
+        <div class="section">
+            <div class="fp-bg"></div>
+        </div>
+        <div class="section">
+            <div class="fp-bg"></div>
+        </div>
+        <div class="section">
+            <div class="fp-bg"></div>
+        </div>
+        <div class="section">
+            <div class="fp-bg"></div>
+        </div>
     </div>
+    <input type="hidden" id="_4" value="3" />
     <div class="down">
         <img src="./images/down.png" >
     </div>
@@ -120,12 +171,13 @@
 
 
 <script src="./js/jquery-1.8.3.min.js"></script>
-<script src="./js/fullpage.min.js"></script>
+<!-- <script src="./js/fullpage.min.js"></script> -->
+<script src="./js/limit.js"></script>
 <script src="./js/fullpage.extensions.min.js"></script>
 <script src="js/public.js"></script>
 <script type="text/javascript">
  //JS代码部分
- $(function(){
+
     var n = 0;
      //首页menu点击效果
     $(".header .nav .menu").click(function(){
@@ -136,28 +188,29 @@
 
 
     //fullpage全屏滚动
-    $('#fullpage').fullpage({
+    new fullpage('#fullpage', {
         anchors: ['page1', 'page2', 'page3', 'page4','page5','page6','page7'],
         menu:"#navmenu",
+        slidesNavigation: true,
+        scrollingSpeed: 1000,
         parallax: true,
-		// parallaxKey: 'YWx2YXJvdHJpZ28uY29tXzlNZGNHRnlZV3hzWVhnPTFyRQ==',
+		parallaxKey: 'YWx2YXJvdHJpZ28uY29tXzlNZGNHRnlZV3hzWVhnPTFyRQ==',
 		parallaxOptions: {
 			type: 'cover',
 			percentage: 100,
 			property: 'translate',
 		},
-		scrollingSpeed: 1000,
 		autoScrolling: false,
-		scrollBar: false,
+		scrollBar: true,
 		fitToSection:false,
-        afterLoad:function(anchorLink,index){
-            n = index.index + 1;
-            if(n>=$("#fullpage .section").length){
-                $(".down").hide();
-            }else{
-                $(".down").show();
-            }
-        },
+        // afterLoad:function(anchorLink,index){
+        //     n = index.index + 1;
+        //     if(n>=$("#fullpage .section").length){
+        //         $(".down").hide();
+        //     }else{
+        //         $(".down").show();
+        //     }
+        // },
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
     });
 
@@ -165,9 +218,6 @@
     $(".down").click(function(){
         $.fn.fullpage.moveSectionDown()
     })
-
- })
- 
 
 </script>
 
