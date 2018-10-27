@@ -266,6 +266,153 @@
     height: 60px;
     border-radius: 50%;
 }
+.section .text{
+    position: absolute;
+    top: 50%;
+    right: 12.5%;
+    transform: translateY(-50%);
+}
+.section .text h2{
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+}
+.section .text p{
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0;
+}
+.section .text a{
+    display: block;
+    max-width: 250px;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border:1px solid #fff;
+    border-radius: 5px;
+    transition: background .3s ease;
+    cursor: pointer;
+}
+.section .text a:hover{
+    background: #fff;
+    color: #000;
+}
+.section .text i{
+    max-width: 120px;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    display: block;
+    margin:0 auto 35px;
+}
+.section .text .con{
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 45px;
+}
+.section .text .contact ul{
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.section .text .contact ul li{
+    width: 48%;
+    margin-bottom: 20px;
+}
+.section .text .contact ul li:last-child{
+    width: 100%;
+}
+.section .text .contact ul li input{
+    display: block;
+    width: 100%;
+    max-width: 540px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #343434;
+    border:none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    padding-left: 20px;
+}
+.section .text .contact ul li textarea{
+    width: 100%;
+    height: 190px;
+    background-color: #343434;
+    outline: none;
+    resize: none;
+    border:none;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px;
+}
+.section .text .contact ul li input::-webkit-input-placeholder {
+    font-size: 16px;
+    color: #fff;
+}
+.section .text .contact ul li input:-moz-placeholder {
+    font-size: 16px;
+    color: #fff;
+}
+.section .text .contact ul li input:-ms-input-placeholder {
+    font-size: 16px;
+    color: #fff;
+}
+.section .text .contact ul li textarea::-webkit-input-placeholder {
+    font-size: 16px;
+    color: #fff;
+}
+.section .text .contact ul li textarea:-moz-placeholder {
+    font-size: 16px;
+    color: #fff;
+}
+.section .text .contact ul li textarea:-ms-input-placeholder {
+    font-size: 16px;
+    color: #fff;
+}
+#fullpage .section:nth-child(7) .text{
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 1200px;
+}
+.section .text .contact p{
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    align-items: center;
+    justify-content:center;
+}
+.section .text .contact p button{
+    width: 155px;
+    height: 40px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 38px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: background .3s ease;
+    cursor: pointer;
+    background-color: transparent;
+    margin-right: 30px;
+    padding: 0;
+
+}
+.section .text .contact p button:last-child{
+    margin-right: 0px;
+}
+.section .text .contact p button:hover{
+    background: #fff;
+    color: #000;
+}
 @media (min-width: 1400px){
 
 }
@@ -279,7 +426,10 @@
 
 }
 @media(max-width:1024px){
-
+    .section .text{
+        top: 42%;
+        right: 53.5%;
+    }
 }
 @media(max-width:991px){
 

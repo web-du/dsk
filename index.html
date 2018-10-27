@@ -15,30 +15,6 @@
     <link type="text/css" rel="stylesheet" href="css/ie7.css" />
     <![endif]-->
     <style>
-        /* #fullpage .section{
-            background-image:url("./images/img-02.jpg");
-            background-repeat: no-repeat;
-            background-size:cover;
-            background-position: center center;
-        }
-        #fullpage .section:nth-child(2){
-            background-image:url("./images/img-03.jpg");
-        }
-        #fullpage .section:nth-child(3){
-            background-image:url("./images/img-04.jpg");
-        }
-        #fullpage .section:nth-child(4){
-            background-image:url("./images/img-05.jpg");
-        }
-        #fullpage .section:nth-child(5){
-            background-image:url("./images/img-06.jpg");
-        }
-        #fullpage .section:nth-child(6){
-            background-image:url("./images/img-07.jpg");
-        }
-        #fullpage .section:nth-child(7){
-            background-image:url("./images/img-08.jpg");
-        } */
         .fp-bg{
 			background-size: cover;
 			transform: translate3d(0,0,0);
@@ -49,7 +25,6 @@
         
         #fullpage .section .fp-bg{
             background-image:url("./images/img-02.jpg");
-            /* background-repeat: no-repeat; */
             background-size:cover;
             transform: translate3d(0,0,0);
 			-webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
@@ -137,24 +112,89 @@
     <div id="fullpage">
         <div class="section">
             <div class="fp-bg"></div>
+            <div class="text">
+                <h2>国际肽酶研究所</h2>
+                <p>inernational  peptide & enzyme institute</p>
+                <i></i>
+                <a href="#">探索</a>
+            </div>
         </div>
         <div class="section">
             <div class="fp-bg"></div>
+            <div class="text">
+                <h2>环保</h2>
+                <p>environmental protection</p>
+                <i></i>
+                <a href="#">立即查看</a>
+            </div>
         </div>
         <div class="section">
             <div class="fp-bg"></div>
+            <div class="text">
+                <h2>农业</h2>
+                <p>environmental protection</p>
+                <i></i>
+                <a href="#">立即查看</a>
+            </div>
         </div>
         <div class="section">
             <div class="fp-bg"></div>
+            <div class="text">
+                <h2>健康</h2>
+                <p>Health products</p>
+                <i></i>
+                <a href="#">立即查看</a>
+            </div>
         </div>
         <div class="section">
             <div class="fp-bg"></div>
+            <div class="text">
+                <h2>美业</h2>
+                <p>The beauty industry</p>
+                <i></i>
+                <a href="#">立即查看</a>
+            </div>
         </div>
         <div class="section">
             <div class="fp-bg"></div>
+            <div class="text">
+                <h2>公司简介</h2>
+                <p>Company profile</p>
+                <i></i>
+                <div class="con">依托国际肽酶研究所为主要技术支撑，集团已成功研发、生产出四大系列，一百多款产品，供应美国、德国、澳大利亚、中国、日本、韩国、中东、印度等全球50多个国家及地区。产品范围涵盖污水与油脂处理、水体修复、垃圾除臭、畜牧与水产养殖、农业种植、农产品处理、生物发酵、癌症与慢性病防治、两性健康、解酒护肝、健康管理、抗衰除皱、美白祛斑、生发袪痘、洗护除臭、家庭日化等，深受各领域专业机构与广大消费者青睐。</div>
+                <a href="#">立即查看</a>
+            </div>
         </div>
         <div class="section">
             <div class="fp-bg"></div>
+            <div class="text">
+                <h2>联系我们</h2>
+                <p>Contact us</p>
+                <i></i>
+                <div class="contact">
+                    <ul>
+                        <li>
+                            <input type="text" placeholder="姓名">
+                        </li>
+                        <li>
+                            <input type="text" placeholder="电话">
+                        </li>
+                        <li>
+                            <input type="text" placeholder="邮箱">
+                        </li>
+                        <li>
+                            <input type="text" placeholder="QQ">
+                        </li>
+                        <li>
+                            <textarea placeholder="留言内容"></textarea>
+                        </li>
+                    </ul>
+                    <p>
+                        <button>提交</button>
+                        <button>重填</button>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
     <input type="hidden" id="_4" value="3" />
@@ -171,13 +211,13 @@
 
 
 <script src="./js/jquery-1.8.3.min.js"></script>
-<!-- <script src="./js/fullpage.min.js"></script> -->
+<script src="./js/fullpage.min.js"></script>
 <script src="./js/limit.js"></script>
 <script src="./js/fullpage.extensions.min.js"></script>
 <script src="js/public.js"></script>
 <script type="text/javascript">
  //JS代码部分
-
+$(function(){
     var n = 0;
      //首页menu点击效果
     $(".header .nav .menu").click(function(){
@@ -192,7 +232,7 @@
         anchors: ['page1', 'page2', 'page3', 'page4','page5','page6','page7'],
         menu:"#navmenu",
         slidesNavigation: true,
-        scrollingSpeed: 1000,
+        scrollingSpeed: 700,
         parallax: true,
 		parallaxKey: 'YWx2YXJvdHJpZ28uY29tXzlNZGNHRnlZV3hzWVhnPTFyRQ==',
 		parallaxOptions: {
@@ -203,21 +243,23 @@
 		autoScrolling: false,
 		scrollBar: true,
 		fitToSection:false,
-        // afterLoad:function(anchorLink,index){
-        //     n = index.index + 1;
-        //     if(n>=$("#fullpage .section").length){
-        //         $(".down").hide();
-        //     }else{
-        //         $(".down").show();
-        //     }
-        // },
+        afterLoad:function(anchorLink,index){
+            n = index.index + 1;
+            if(n>=$("#fullpage .section").length){
+                $(".down").hide();
+            }else{
+                $(".down").show();
+            }
+        },
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
     });
 
     //点击向下滚动
     $(".down").click(function(){
-        $.fn.fullpage.moveSectionDown()
+        fullpage_api.moveSectionDown();
     })
+})
+    
 
 </script>
 
