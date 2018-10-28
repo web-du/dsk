@@ -7,7 +7,7 @@
     <title>首页</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/fullpage.min.css">
     <link type="text/css" rel="stylesheet" href="css/index.css" />
@@ -88,25 +88,25 @@
 <div class="content">
     <ul id="navmenu">
         <li data-menuanchor="page1" class="active">
-            <a href="#page1">首页</a>
+            <a href="#page1"><span>首页</span></a>
         </li>
         <li data-menuanchor="page2">
-            <a href="#page2">环保</a>
+            <a href="#page2"><span>环保</span></a>
         </li>
         <li data-menuanchor="page3">
-            <a href="#page3">农业</a>
+            <a href="#page3"><span>农业</span></a>
         </li>
         <li data-menuanchor="page4">
-            <a href="#page4">健康</a>
+            <a href="#page4"><span>健康</span></a>
         </li>
         <li data-menuanchor="page5">
-            <a href="#page5">美业</a>
+            <a href="#page5"><span>美业</span></a>
         </li>
         <li data-menuanchor="page6">
-            <a href="#page6">公司简介</a>
+            <a href="#page6"><span>公司简介</span></a>
         </li>
         <li data-menuanchor="page7">
-            <a href="#page7">联系我们</a>
+            <a href="#page7"><span>联系我们</span></a>
         </li>
     </ul>
     <div id="fullpage">
@@ -197,23 +197,53 @@
             </div>
         </div>
     </div>
-    <input type="hidden" id="_4" value="3" />
     <div class="down">
         <img src="./images/down.png" >
+    </div>
+    <div class="map">
+        <img src="./images/img-09.jpg" >
     </div>
 </div>
 <!--content结束-->
 
 <!--footer开始-->
 <div class="footer">
+    <div class="watch-us">
+        <span>关注我们</span>
+        <a href="#">
+            <img src="./images/img-10.png" >
+        </a>
+        <a href="#">
+            <img src="./images/img-11.png" >
+        </a>
+    </div>
+    <div class="footer-nav">
+        <ul>
+            <li>
+                <a href="#">联系我们</a>
+            </li>
+            <li>
+                <a href="#">相关企业</a>
+            </li>
+            <li>
+                <a href="#">隐私条款和网站声明</a>
+            </li>
+        </ul>
+        <p>© 2018 La IPEI - 保留所有权利     ICP备案号：沪ICP备16012378号</p>
+        <a href="#">
+            <img src="./images/img-12.png" >
+        </a>
+    </div>
 </div>
 <!--footer结束-->
-
+<!-- 返回顶部 -->
+<div class="toTop">
+    <i class="fa fa-chevron-up"></i>
+</div>
 
 <script src="./js/jquery-1.8.3.min.js"></script>
 <script src="./js/fullpage.min.js"></script>
-<script src="./js/limit.js"></script>
-<script src="./js/fullpage.extensions.min.js"></script>
+<script src="./js/easings.min.js"></script>
 <script src="js/public.js"></script>
 <script type="text/javascript">
  //JS代码部分
@@ -231,10 +261,11 @@ $(function(){
     new fullpage('#fullpage', {
         anchors: ['page1', 'page2', 'page3', 'page4','page5','page6','page7'],
         menu:"#navmenu",
+        css3: false,
+        resize:true,
         slidesNavigation: true,
         scrollingSpeed: 700,
-        parallax: true,
-		parallaxKey: 'YWx2YXJvdHJpZ28uY29tXzlNZGNHRnlZV3hzWVhnPTFyRQ==',
+        easing: 'easeOutBounce',
 		parallaxOptions: {
 			type: 'cover',
 			percentage: 100,
@@ -258,6 +289,7 @@ $(function(){
     $(".down").click(function(){
         fullpage_api.moveSectionDown();
     })
+
 })
     
 
