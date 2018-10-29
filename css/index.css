@@ -759,6 +759,66 @@ source{
     width: 70%;
     margin:0 auto;
 }
+/* 列表详情页 */
+.pro-details .box{
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    overflow: hidden;
+    flex-wrap:wrap;
+}
+.pro-details .box .con{
+    max-width: 400px;
+}
+.pro-details .box .con h2{
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.pro-details .box .con p{
+    font-size: 14px;
+    line-height: 28px;
+    color: #ccc;
+    width: 80%;
+    margin: 0 auto;
+}
+.pro-details .box>img{
+    margin-right:225px;
+}
+.pro-details .section:last-child .box>img{
+    margin-left: 225px;
+    margin-right: 0;
+}
+.pro-details .pro-text{
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    flex-wrap:wrap;
+    flex-direction: column;
+    overflow: hidden;
+}
+.pro-details .pro-text h2{
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 35px;
+}
+.pro-details .pro-text p{
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    width: 60%;
+    margin:0 auto;
+}
 @media (min-width: 1400px){
 
 }
@@ -860,6 +920,23 @@ source{
     .pro-list .list li .box h2{
         font-size: 20px;
         margin: 15px 0;
+    }
+    /**环保详情页**/
+    .pro-details .box>img{
+        margin-right: 100px;
+    }
+    .pro-details .section:last-child .box>img{
+        margin-left: 100px;
+        margin-right: 0;
+    }
+    .pro-details .box .con h2{
+        font-size: 30px;
+    }
+    .pro-details .pro-text h2{
+        font-size: 30px;
+    }
+    .pro-details .pro-text p{
+        font-size: 20px;
     }
 }
 @media(max-width:991px){
@@ -1168,6 +1245,36 @@ source{
     .footer-nav a img{
         width: 40px;
         height: 40px;
+    }
+    /**详情页**/
+    .pro-details .box>img{
+        width: 102px;
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .pro-details .box .con h2{
+        font-size: 20px;
+    }
+    .pro-details .box{
+        flex-direction: column;
+        text-align: center;
+    }
+    .pro-details .pro-text h2 {
+        font-size: 20px;
+    }
+    .pro-details .pro-text p{
+        font-size:14px;
+        width: 85%;
+    }
+    .pro-details .section:last-child .box{
+        flex-direction: column-reverse;
+    }
+    .pro-details .section:last-child .box>img{
+        margin-left: 0;
+    }
+    .pro-details .box .con h2{
+        margin-bottom: 0;
     }
 }
 @media(max-width:374px){

@@ -26,7 +26,7 @@ $(function(){
         $(".pro-list .list li").eq(i).css("transition-delay",i * 0.1+"s");
     }
     $(document).ready(function(){
-        var a,b,c,d;
+        var a,b,c,d,e;
         a=$(window).height();
         b = 0;
         d = 0;
@@ -34,6 +34,8 @@ $(function(){
             $(".pro-list .list li").each(function(){
                     $(this).addClass('now');
             });
+
+            $(".pro-details .section").eq(0).find(".section1").addClass("animated fadeInRight")
         }
         $(window).scroll(function(){
             b=$(this).scrollTop();
@@ -57,6 +59,17 @@ $(function(){
                 }
                 else{
                     $(this).removeClass('now');
+                }
+            });
+
+            //列表详情页
+            $(".pro-details .section").each(function(){
+                e=$(this).find("p").offset().top;
+                if(a+b>e){
+                    $(this).find(".section1").addClass('animated fadeInRight');
+                }
+                else{
+                    $(this).find(".section1").removeClass('animated fadeInRight');
                 }
             });
 
