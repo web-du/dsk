@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -8,6 +7,7 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./css/video.css"> -->
     <link type="text/css" rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/fullpage.min.css">
     <link type="text/css" rel="stylesheet" href="css/index.css" />
@@ -15,39 +15,34 @@
     <link type="text/css" rel="stylesheet" href="css/ie7.css" />
     <![endif]-->
     <style>
-        .fp-bg{
+        #fullpage .section{
 			background-size: cover;
 			transform: translate3d(0,0,0);
 			-webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
             backface-visibility: hidden;
             height: 100%;
+            background-attachment: fixed;
         }
         
-        #fullpage .section .fp-bg{
-            background-image:url("./images/img-02.jpg");
-            background-size:cover;
-            transform: translate3d(0,0,0);
-			-webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
-            backface-visibility: hidden;
-            height: 100%;
-            background-position: center center;
+        #fullpage .section:first-child{
+            background-image:url("./images/new-img06.jpg");
         }
-        #fullpage .section:nth-child(2) .fp-bg{
+        #fullpage .section:nth-child(2){
             background-image:url("./images/img-03.jpg");
         }
-        #fullpage .section:nth-child(3) .fp-bg{
-            background-image:url("./images/img-04.jpg");
+        #fullpage .section:nth-child(3){
+            background-image:url("./images/new-img07.jpg");
         }
-        #fullpage .section:nth-child(4) .fp-bg{
+        #fullpage .section:nth-child(4){
             background-image:url("./images/img-05.jpg");
         }
-        #fullpage .section:nth-child(5) .fp-bg{
+        #fullpage .section:nth-child(5){
             background-image:url("./images/img-06.jpg");
         }
-        #fullpage .section:nth-child(6) .fp-bg{
+        #fullpage .section:nth-child(6){
             background-image:url("./images/img-07.jpg");
         }
-        #fullpage .section:nth-child(7) .fp-bg{
+        #fullpage .section:nth-child(7){
             background-image:url("./images/img-08.jpg");
         }
     </style>
@@ -64,9 +59,9 @@
             </span>
             <ul class="list">
                 <li><a href="environmental_protection.html">环保</a></li>
-                <li><a href="#">农业</a></li>
-                <li><a href="#">健康</a></li>
-                <li><a href="#">美业</a></li>
+                <li><a href="agriculture.html">农业</a></li>
+                <li><a href="health.html">健康</a></li>
+                <li><a href="beauty.html">美业</a></li>
                 <li><a href="#">关于我们</a></li>
                 <li>
                     <div class="tel">
@@ -111,7 +106,6 @@
     </ul>
     <div id="fullpage">
         <div class="section">
-            <div class="fp-bg"></div>
             <div class="text">
                 <h2>国际肽酶研究所</h2>
                 <p>inernational  peptide & enzyme institute</p>
@@ -120,43 +114,38 @@
             </div>
         </div>
         <div class="section">
-            <div class="fp-bg"></div>
             <div class="text">
                 <h2>环保</h2>
                 <p>environmental protection</p>
                 <i></i>
-                <a href="#">立即查看</a>
+                <a href="environmental_protection.html">立即查看</a>
             </div>
         </div>
         <div class="section">
-            <div class="fp-bg"></div>
             <div class="text">
                 <h2>农业</h2>
                 <p>environmental protection</p>
                 <i></i>
-                <a href="#">立即查看</a>
+                <a href="agriculture.html">立即查看</a>
             </div>
         </div>
         <div class="section">
-            <div class="fp-bg"></div>
             <div class="text">
                 <h2>健康</h2>
                 <p>Health products</p>
                 <i></i>
-                <a href="#">立即查看</a>
+                <a href="health.html">立即查看</a>
             </div>
         </div>
         <div class="section">
-            <div class="fp-bg"></div>
             <div class="text">
                 <h2>美业</h2>
                 <p>The beauty industry</p>
                 <i></i>
-                <a href="#">立即查看</a>
+                <a href="beauty.html">立即查看</a>
             </div>
         </div>
         <div class="section">
-            <div class="fp-bg"></div>
             <div class="text">
                 <h2>公司简介</h2>
                 <p>Company profile</p>
@@ -166,7 +155,6 @@
             </div>
         </div>
         <div class="section">
-            <div class="fp-bg"></div>
             <div class="text">
                 <h2>联系我们</h2>
                 <p>Contact us</p>
@@ -235,6 +223,7 @@
         </a>
     </div>
 </div>
+
 <!--footer结束-->
 <!-- 返回顶部 -->
 <div class="toTop">
@@ -242,8 +231,9 @@
 </div>
 
 <script src="./js/jquery-1.8.3.min.js"></script>
-<script src="./js/fullpage.min.js"></script>
+<script src="./js/fullpage.js"></script>
 <script src="./js/easings.min.js"></script>
+<script src="./js/fullpage.extensions.min.js"></script>
 <script src="js/public.js"></script>
 <script type="text/javascript">
  //JS代码部分
@@ -253,19 +243,20 @@ $(function(){
     new fullpage('#fullpage', {
         anchors: ['page1', 'page2', 'page3', 'page4','page5','page6','page7'],
         menu:"#navmenu",
-        css3: false,
+        css3: true,
         resize:true,
         slidesNavigation: true,
         scrollingSpeed: 700,
-        easing: 'easeOutBounce',
+        parallax:true,
 		parallaxOptions: {
 			type: 'cover',
 			percentage: 100,
 			property: 'translate',
 		},
 		autoScrolling: false,
-		scrollBar: true,
+		scrollBar: fullpage,
 		fitToSection:false,
+
         afterLoad:function(anchorLink,index){
             n = index.index + 1;
             if(n>=$("#fullpage .section").length){
@@ -282,6 +273,9 @@ $(function(){
         fullpage_api.moveSectionDown();
     })
 
+    // var myvideo = document.getElementById("vjs-tech");
+    // myvideo.play();
+    // myvideo.defaultMuted=true;
 })
     
 

@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>产品详情</title>
+    <title>关于我们</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
@@ -16,16 +16,24 @@
     <link type="text/css" rel="stylesheet" href="css/ie7.css" />
     <![endif]-->
     <style>
-        .pro-details .section{
-            background-image: url("./images/img-21.jpg");
+        .about .section{
             background-repeat: no-repeat;
             background-size: cover;
         }
-        .pro-details .section:nth-child(2){
-            background-color: #0d0d0d;
+        .about .section:first-child{
+            background-image: url("./images/about-img01.jpg");
         }
-        .pro-details .section:nth-child(3){
-            background-image: url("./images/img-22.jpg");
+        .about .section:nth-child(2){
+            background-image: url("./images/about-img02.jpg");
+        }
+        .about .section:nth-child(3){
+            background-image: url("./images/about-img03.jpg");
+        }
+        .about .section:nth-child(4){
+            background-image: url("./images/about-img04.jpg");
+        }
+        .about .section:nth-child(5){
+            background-image: url("./images/about-img04.jpg");
         }
     </style>
 </head>
@@ -63,31 +71,70 @@
 
 <!--content开始-->
 <div class="content">
-    <div class="pro-details">
+    <div class="about">
         <div class="section">
-            <div class="box section1">
-                <img src="./images/img-23.png" >
-                <div class="con">
-                    <h2>抗衰修复产品1</h2>
-                    <p>肌因级修护，强化肌肤自身修护力，紧弹亮润释放年轻！</p>
+            <div class="about-con">
+                <div class="about-text">
+                    <div class="box">
+                        <h2>公司简介</h2>
+                        <p>environmental protection</p>
+                        <i></i>
+                        <a href="#">查看更多</a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="section">
-            <div class="pro-text section1">
-                <h2>塑造无痕美肌</h2>
-                <p>开启抗皱护理仪典。柔和泡沫洁面膏(50ml)遇水起泡可净化舒缓肌肤，令肌肤清爽嫩滑。滋润爽肤水(60ml)不含酒精成分，可舒缓及柔化肌肤，同时清洁和收缩毛孔。亮颜修护抗皱精华(50ml)让肌肤实现看得见的嫩滑，更显年轻光彩。</p>
+            <div class="about-con">
+                <div class="about-text">
+                    <div class="box">
+                        <h2>专家观点</h2>
+                        <p>Expert opinion</p>
+                        <i></i>
+                        <a href="#">查看更多</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="section">
-            <div class="box section1">
-                <div class="con">
-                    <h2>抗衰修复产品1</h2>
-                    <p>肌因级修护，强化肌肤自身修护力，紧弹亮润释放年轻！</p>
+            <div class="about-con">
+                <div class="about-text">
+                    <div class="box">
+                        <h2>国际权威机构</h2>
+                        <p>International authority</p>
+                        <i></i>
+                        <a href="#">查看更多</a>
+                    </div>
                 </div>
-                <img src="./images/img-23.png" >
             </div>
         </div>
+        <div class="section">
+            <div class="about-con">
+                <div class="about-text">
+                    <div class="box">
+                        <h2>行业动态</h2>
+                        <p>Industry dynamics</p>
+                        <i></i>
+                        <a href="#">查看更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="about-con">
+                <div class="about-text">
+                    <div class="box">
+                        <h2>集团新闻</h2>
+                        <p>Group news</p>
+                        <i></i>
+                        <a href="#">查看更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="map">
+        <img src="./images/img-09.jpg" >
     </div>
 </div>
 <!--content结束-->
@@ -133,9 +180,8 @@
 <script type="text/javascript">
  //JS代码部分
 $(function(){
-     
     //fullpage全屏滚动
-    new fullpage('.pro-details', {
+    new fullpage('.about', {
         resize:true,
         slidesNavigation: true,
         scrollingSpeed: 700,
