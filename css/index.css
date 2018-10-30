@@ -823,6 +823,7 @@ source{
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 .about .about-con .about-text{
     height: 100%;
@@ -832,9 +833,11 @@ source{
     display: -moz-flex;
     align-items: center;
     justify-content: center;
+    transform: translateX(0px);
+    transition: transform 0.7s cubic-bezier(.445,.05,.55,.95);
 }
-.about .about-con .about-text .box{
-    /* transform: translateY(-25%); */
+.about .about-con .about-text.now{
+    transform: translateX(-40%);
 }
 .about .about-con .about-text .box h2{
     font-size: 55px;
@@ -872,6 +875,77 @@ source{
 .about .about-con .about-text .box a:hover{
     background: #fff;
     color: #000;
+}
+.about .about-con .about-text .tomore{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+.about .about-con .about-text .tomore span{
+    font-size: 14px;
+    color: #fff;
+    margin:0 15px;
+}
+.about .about-con .about-text .tomore .line{
+    display: block;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    background-color: #fff;
+    height: 2px;
+    min-width: 30px;
+    transition: min-width .5s cubic-bezier(.445,.05,.55,.95);
+}
+.about .about-con .about-text .tomore:hover .line{
+    min-width: 46px;
+}
+.about .about-con .right{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index:9;
+    background-color: #666;
+    left: 0;
+    top:0;
+    transform: translateX(100%);
+    transition: transform 1s cubic-bezier(.445,.05,.55,.95);
+}
+.about .about-con .right.now{
+    transform: translateX(0%);
+}
+.about .about-con .right .toback{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: row-reverse;
+}
+.about .about-con .right span{
+    font-size: 14px;
+    color: #fff;
+    margin:0 15px;
+}
+.about .about-con .right .line{
+    display: block;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    background-color: #fff;
+    height: 2px;
+    min-width: 30px;
+    transition: min-width .5s cubic-bezier(.445,.05,.55,.95);
+}
+.about .about-con .right .toback:hover .line{
+    min-width: 40px;
 }
 @media (min-width: 1400px){
 

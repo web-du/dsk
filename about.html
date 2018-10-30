@@ -20,19 +20,19 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-        .about .section:first-child{
+        .about .section:first-child .about-text{
             background-image: url("./images/about-img01.jpg");
         }
-        .about .section:nth-child(2){
+        .about .section:nth-child(2) .about-text{
             background-image: url("./images/about-img02.jpg");
         }
-        .about .section:nth-child(3){
+        .about .section:nth-child(3) .about-text{
             background-image: url("./images/about-img03.jpg");
         }
-        .about .section:nth-child(4){
+        .about .section:nth-child(4) .about-text{
             background-image: url("./images/about-img04.jpg");
         }
-        .about .section:nth-child(5){
+        .about .section:nth-child(5) .about-text{
             background-image: url("./images/about-img04.jpg");
         }
     </style>
@@ -80,6 +80,16 @@
                         <p>environmental protection</p>
                         <i></i>
                         <a href="#">查看更多</a>
+                    </div>
+                    <div class="tomore">
+                        <span>discover</span>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="toback">
+                        <span>返回</span>
+                        <div class="line"></div>
                     </div>
                 </div>
             </div>
@@ -196,7 +206,15 @@ $(function(){
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
     });
 
-    
+    //点击右侧
+    $(".tomore").click(function(){
+        $(this).parents(".about-con").find(".right").addClass("now");
+        $(this).parents(".about-text").addClass("now");
+    })
+    $(".toback").click(function(){
+        $(this).parents(".right").removeClass("now");
+        $(this).parents(".right").prev(".about-text").removeClass("now");
+    })    
 })
     
 
