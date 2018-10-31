@@ -7,7 +7,6 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="./css/video.css"> -->
     <link type="text/css" rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/fullpage.min.css">
     <link type="text/css" rel="stylesheet" href="css/index.css" />
@@ -22,8 +21,18 @@
             backface-visibility: hidden;
             height: 100%;
             background-attachment: fixed;
+            position: relative;
         }
-        
+        #fullpage .section video{
+            position: absolute;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 3;
+            left:0;
+            top:0;
+        }
         #fullpage .section:first-child{
             background-image:url("./images/new-img06.jpg");
         }
@@ -112,6 +121,9 @@
                 <i></i>
                 <a href="#">探索</a>
             </div>
+            <video id="v1" autoplay muted loop>
+                <source  src="./video/abs.webm">
+            </video>
         </div>
         <div class="section">
             <div class="text">
@@ -273,9 +285,24 @@ $(function(){
         fullpage_api.moveSectionDown();
     })
 
-    // var myvideo = document.getElementById("vjs-tech");
-    // myvideo.play();
-    // myvideo.defaultMuted=true;
+    var myvideo = document.getElementById("v1");
+    myvideo.play();
+
+
+    var a,b,c;
+    a = $(window).height();
+    $(window).scroll(function(){
+        b = $(this).scrollTop();
+        c = $("#v1").offset().top;
+        console.log(c);
+        if(a+b>=c){
+            myvideo.pause();
+            console.log(111)
+        }else{
+            myvideo.play();
+            console.log(222)
+        }
+    })
 })
     
 

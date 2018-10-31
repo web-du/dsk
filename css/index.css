@@ -38,6 +38,7 @@
     transition: transform .5s ease;
     width: 50px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 .header .nav .menu.now{
     transform: translateX(-5px);
@@ -86,23 +87,23 @@
 }
 .header .nav .menu .line{
     background: #b5b5b5;
-    height: 2px;
+    height: 1px;
     position: absolute;
     top: 26px;
     transition: background .5s ease;
-    width: 20px;
+    width: 26px;
     left:50%;
-    margin-left: -10px;
+    margin-left: -13px;
 }
 .header .nav .menu .line::after,.header .nav .menu .line::before{
     background: #b5b5b5;
     content: "";
     display: block;
-    height: 2px;
+    height: 1px;
     position: absolute;
     top: -8px;
     transition: transform .5s ease,top .3s ease,bottom .3s ease;
-    width: 20px;
+    width: 26px;
 }
 .header .nav .menu .line::after{
     bottom: -8px;
@@ -198,52 +199,47 @@
 }
 #navmenu{
     position: fixed;
-    right:25px;
-    bottom:130px;
+    left:25px;
+    bottom:10px;
     z-index: 10;
 }
 #navmenu li{
     margin-bottom: 20px;
 }
 #navmenu a{
-    padding-right: 25px;
+    padding-left: 25px;
     position: relative;
-    font-size: 14px;
-    color: #f2f2f2;
+    font-size: 12px;
+    color: #000;
     display: block;
     max-width: 85px;
     width: 100%;
+    transition: color .3s ease;
+    cursor: pointer;
 }
 #navmenu a:hover{
-    cursor: pointer;
+    color: #fff;
 }
 #navmenu a::after{
     content:'';
     position: absolute;
-    right:0;
-    width: 4px;
-    height: 4px;
+    left:0;
+    width: 2px;
+    height: 2px;
     border-radius: 50%;
-    background-color: #ccc;
+    background-color: #000;
+    border: 1px solid #000;
     top:50%;
     margin-top: -2px;
+    transition: all .5s cubic-bezier(.65,-.73,.46,2.1);
 }
 #navmenu .active a::after{
     width: 12px;
     height: 12px;
-    border: 1px solid #fff;
+    border: 2px solid #000;
     background-color: transparent;
     margin-top: -6px;
-    right:-4px;
-}
-#navmenu .active a::before{
-    position: absolute;
-    content:'';
-    width: 13px;
-    height: 2px;
-    background-color: #fff;
-    right:8px;
-    top:50%;
+    left:-4px;
 }
 .down{
     position: fixed;
@@ -547,23 +543,6 @@
 .toTop i{
     margin-left: 2px;
 }
-video{
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    min-width: 100%;
-    min-height: 100%;
-    height: auto;
-    width: auto;
-    z-index: 9;
-}
-source{
-    min-width: 100%;
-    min-height: 100%;
-    height: auto;
-    width: auto;
-}
-
 /* 环保 */
 .envir .section .envir-text{
     position: absolute;
@@ -961,7 +940,7 @@ source{
 @media(max-width:1024px){
     .section .text{
         top: 42%;
-        right: 53.5%;
+        right: 50%;
         transform: translate(50%,-50%);
     }
     #fullpage .section:nth-child(n+2) .text{
