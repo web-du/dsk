@@ -17,26 +17,26 @@
     <link type="text/css" rel="stylesheet" href="css/ie7.css" />
     <![endif]-->
     <style>
-        .fp-tableCell{
+        /* .fp-tableCell{
             height: 100% !important;
-        }
+        } */
         .about .section{
             background-repeat: no-repeat;
             background-size: cover;
         }
-        .about .section:first-child .about-text{
+        .about .section:first-child{
             background-image: url("./images/about-img01.jpg");
         }
-        .about .section:nth-child(2) .about-text{
+        .about .section:nth-child(2){
             background-image: url("./images/about-img02.jpg");
         }
-        .about .section:nth-child(3) .about-text{
+        .about .section:nth-child(3){
             background-image: url("./images/about-img03.jpg");
         }
-        .about .section:nth-child(4) .about-text{
+        .about .section:nth-child(4){
             background-image: url("./images/about-img04.jpg");
         }
-        .about .section:nth-child(5) .about-text{
+        .about .section:nth-child(5){
             background-image: url("./images/about-img04.jpg");
         }
         .about .section:first-child .right{
@@ -93,7 +93,7 @@
                         <h2>公司简介</h2>
                         <p>environmental protection</p>
                         <i></i>
-                        <a href="#">查看更多</a>
+                        <a href="javascript:void(0);" class="tomore">查看更多</a>
                     </div>
                     <div class="tomore">
                         <span>discover</span>
@@ -136,7 +136,7 @@
                         <h2>专家观点</h2>
                         <p>Expert opinion</p>
                         <i></i>
-                        <a href="#">查看更多</a>
+                        <a href="javascript:void(0);" class="tomore">查看更多</a>
                     </div>
                 </div>
             </div>
@@ -148,7 +148,7 @@
                         <h2>国际权威机构</h2>
                         <p>International authority</p>
                         <i></i>
-                        <a href="#">查看更多</a>
+                        <a href="javascript:void(0);" class="tomore">查看更多</a>
                     </div>
                 </div>
             </div>
@@ -160,7 +160,7 @@
                         <h2>行业动态</h2>
                         <p>Industry dynamics</p>
                         <i></i>
-                        <a href="#">查看更多</a>
+                        <a href="javascript:void(0);" class="tomore">查看更多</a>
                     </div>
                     <div class="tomore">
                         <span>discover</span>
@@ -341,7 +341,7 @@
                         <h2>集团新闻</h2>
                         <p>Group news</p>
                         <i></i>
-                        <a href="#">查看更多</a>
+                        <a href="javascript:void(0);" class="tomore">查看更多</a>
                     </div>
                 </div>
             </div>
@@ -431,13 +431,14 @@ $(function(){
     window.onload = function(){
         var headerH = $(".header").outerHeight();
         var footerH = $(".about-menu").outerHeight();
+        $(".footer").css("padding-bottom",footerH+"px");
         //获取底部导航的高度
         (function(){
             var menuNav = h - headerH;
             var sectionH = h - headerH - footerH;
             $(".menu-nav").height(menuNav);
-            //自定义section的高度
-            $(".about .section").height(sectionH);
+        
+            $(".about .about-con").height(sectionH);
         }())
     }
     
@@ -451,19 +452,21 @@ $(function(){
 			percentage: 100,
 			property: 'translate',
 		},
-		autoScrolling: false,
+		autoScrolling:false,
 		scrollBar: false,
 		fitToSection:false,
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
     });
 
-    //点击右侧
+    //点击右侧与查看更多
     $(".tomore").click(function(){
+        fullpage_api.fitToSection();
         $(this).parents(".about-con").find(".right").addClass("now");
         $(this).parents(".about-text").addClass("now");
         $(document.body).height(h).width(w).css("overflow","hidden");
         $(".toTop").hide();
     })
+
     $(".toback").click(function(){
         $(this).parents(".right").removeClass("now");
         $(this).parents(".right").prev(".about-text").removeClass("now");

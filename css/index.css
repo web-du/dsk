@@ -805,10 +805,12 @@
 }
 /**关于主页**/
 .about .about-con{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
+    left:0;
+    top:0;
 }
 .about .about-con .about-text{
     height: 100%;
@@ -861,7 +863,7 @@
     background: #fff;
     color: #000;
 }
-.about .about-con .about-text .tomore{
+.about .about-con .about-text>.tomore{
     position: absolute;
     top: 50%;
     right: 0;
@@ -915,6 +917,7 @@
     align-items: center;
     cursor: pointer;
     flex-direction: row-reverse;
+    z-index: 10;
 }
 .about .about-con .right .toback span{
     font-size: 14px;
@@ -937,12 +940,13 @@
 .about .about-con .right .con{
     position: absolute;
     width: 80%;
-    height: 80%;
+    height: 90%;
     left:50%;
     top:50%;
-    transform: translate(-50%,-60%);
-    background-color: rgba(0,0,0,0.8);
+    transform: translate(-50%,-50%);
+    background-color: rgba(0,0,0,0.5);
     overflow: hidden;
+    padding: 55px;
 }
 .about .about-con .right .con .video{
     width: 40%;
@@ -961,6 +965,7 @@
     font-size: 28px;
     color: #fff;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 .about .about-con .right .con .sm p{
     font-size: 14px;
@@ -1063,6 +1068,7 @@
     opacity: .3;
     transition: opacity .5s cubic-bezier(.445,.05,.55,.95);
     cursor: pointer;
+    z-index: 4;
 }
 .menu-nav .close::before{
     position: absolute;
@@ -1170,6 +1176,7 @@
     font-size: 14px;
     color: #fff;
     background-color: #0d0d0d;
+    outline: none;
 }
 .about .about-con .right .swiper-box .swiper-pagination-bullet-active{
     background-color: #303030;
@@ -1243,6 +1250,7 @@
     opacity: .3;
     transition: opacity .5s cubic-bezier(.445,.05,.55,.95);
     cursor: pointer;
+    z-index: 5;
 }
 .about .about-con .right .swiper-box .details .close::before{
     position: absolute;
@@ -1520,6 +1528,27 @@
     .menu-nav .menu-title a{
         font-size: 22px;
     }
+    .about .about-con .right .con{
+        height: 95%;
+        padding: 25px;
+    }
+    .about .about-con .right .con .video{
+        margin-top:22%;
+    }
+    .about .about-con .right .swiper-box ul li{
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    .about .about-con .right .swiper-box .swiper-container{
+        padding-bottom: 45px;
+    }
+    .about .about-con .right .swiper-box .time{
+        height: 100px;
+        margin-right: 15px;
+    }
+    .about .about-con .right .swiper-box .time h2{
+        font-size: 28px;
+    }
 }
 @media(max-width:991px){
 
@@ -1577,6 +1606,59 @@
     .pro-list .list li .box p{
         line-height: 20px;
         width: 85%;
+    }
+    /**关于我们页面**/
+    .about .about-con .right .toback span{
+        margin: 0 5px;
+    }
+    .about .about-con .right .con .video{
+        margin:5% auto;
+        width: 85%;
+        float: none;
+    }
+    .about .about-con .right .con .sm{
+        width: 100%;
+        float: none;
+        height: 55%;
+    }
+    .about .about-con .right .con ul{
+        padding: 0;
+    }
+    .menu-nav .img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left:0;
+        top:0;
+        z-index: 2;
+    }
+    .menu-nav .menu-title{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left:0;
+        top:0;
+        z-index: 3;
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        align-items: center;
+        justify-content:center;
+        flex-wrap:wrap;
+        padding: 0;
+        flex-direction: column;
+    }
+    .menu-nav .menu-title h2{
+        width: 100%;
+        text-align: center;
+    }
+    .menu-nav .menu-title h2::after{
+        left:50%;
+        transform: translate(-50%,0%);
+    }
+    .menu-nav .menu-title a{
+        color: #fff;
+        opacity: 0.8;
     }
 }
 
@@ -1743,6 +1825,106 @@
     .pro-list .list li:nth-child(3n+3){
         margin-right: auto;
     }
+    /**关于我们**/
+    .about .about-con .about-text .tomore{
+        display: none;
+    }
+    .about .about-con .right .toback{
+        top: 5%;
+    }
+    .about .about-con .right .con{
+        height: 93%;
+        width: 95%;
+        top:7%;
+        padding: 10px;
+        transform: translate(-50%,0%);
+    }
+    .about .about-con .right .con .video{
+        margin: 2% auto;
+        width: 95%;
+    }
+    .about .about-con .right .con .sm{
+        height: 65%;
+    }
+    .about .about-con .right .con .sm h2{
+        font-size: 16px;
+        margin-top: 5px;
+        margin-bottom:5px;
+    }
+    .about .about-con .right .swiper-box ul li{
+        width: 98%;
+        margin-bottom: 5px;
+        padding: 5px;
+    }
+    .about .about-con .right .swiper-box .time{
+        width: 55px;
+        height: 50px;
+        margin-right: 5px;
+    }
+    .about .about-con .right .swiper-box .time h2 {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    .about .about-con .right .swiper-box .time p {
+        font-size: 12px;
+        color: #fff;
+    }
+    .about .about-con .right .swiper-box .swiper-title h2 {
+        font-size: 14px;
+    }
+    .about .about-con .right .swiper-box .swiper-title p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .about .about-con .right .swiper-box .details{
+        padding: 5px;
+        top:7%;
+        height: 90%;
+    }
+    .about .about-con .right .swiper-box .details h2{
+        font-size: 14px;
+    }
+    .about .about-con .right .swiper-box .details>p{
+        font-size: 12px;
+        margin: 10px 0;
+    }
+    .about .about-con .right .swiper-box .details .details-con{
+        padding: 10px 0;
+    }
+    .about .about-con .right .swiper-box .details .details-con p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .about .about-con .right .swiper-box .details .details-con img{
+        width: 100%;
+        height: auto;
+    }
+    .about .about-con .right .swiper-box .details .close{
+        right: 10px;
+        top: 5px;
+        width: 18px;
+        height: 18px;
+    }
+    .about .about-con .right .swiper-box .details .close::before{
+        left:8px;
+    }
+    .about .about-con .right .swiper-box .details .close::after{
+        left:8px;
+    }
+    .menu-nav .menu-title h2{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .menu-nav .menu-title li {
+        height: 35px;
+        line-height: 35px;
+    }
+    .menu-nav .menu-title a {
+        font-size: 16px;
+    }
+    .about .about-con .right .swiper-box{
+        align-items: flex-end;
+    }
 }
 @media(max-width:640px){
 
@@ -1872,5 +2054,39 @@
     }
     .pro-list .list li .box p{
         font-size: 12px;
+    }
+    /**关于我们**/
+    .about .about-con .about-text .box h2 {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 5px;
+    }
+    .about .about-con .about-text .box p {
+        font-size: 14px;
+    }
+    .about .about-con .about-text .box i {
+        width: 120px;
+        margin: 20px auto;
+    }
+    .about .about-con .about-text .box a{
+        width: 100px;
+    }
+    .about .about-con .right .swiper-box .swiper-pagination-bullet{
+        width: 15px;
+        height: 15px;
+        line-height: 17px;
+    }
+    .about .about-con .right .swiper-box .swiper-container{
+        padding-bottom: 25px;
+    }
+    .about .about-con .right .swiper-box ul li {
+        margin-bottom: 2px;
+        padding: 0px;
+    }
+    .hy-swiper .swiper-pagination{
+        bottom:5px;
+    }
+    .about .about-con .right .swiper-box{
+        width: 95%;
     }
 }
