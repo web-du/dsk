@@ -75,7 +75,7 @@
                 <li>
                     <div class="tel">
                         <img src="./images/img-01.png" >
-                        <h3>联系我们</h3>
+                        <h3><a href="contact_us.html">联系我们</a></h3>
                     </div>
                     <p>Contact us</p>
                 </li>
@@ -121,8 +121,8 @@
                 <i></i>
                 <a href="#">探索</a>
             </div>
-            <video id="v1" autoplay muted loop>
-                <source  src="./video/abs.webm">
+            <video id="v1" autoplay muted loop data-autoplay>
+                <source  src="./video/Comp.Ogg">
             </video>
         </div>
         <div class="section">
@@ -289,20 +289,6 @@ $(function(){
     myvideo.play();
 
 
-    var a,b,c;
-    a = $(window).height();
-    $(window).scroll(function(){
-        b = $(this).scrollTop();
-        c = $("#v1").offset().top;
-        console.log(c);
-        if(a+b>=c){
-            myvideo.pause();
-            console.log(111)
-        }else{
-            myvideo.play();
-            console.log(222)
-        }
-    })
 })
     
 

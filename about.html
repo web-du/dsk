@@ -8,6 +8,7 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/swiper-4.2.2.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link type="text/css" rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/fullpage.min.css">
@@ -16,6 +17,9 @@
     <link type="text/css" rel="stylesheet" href="css/ie7.css" />
     <![endif]-->
     <style>
+        .fp-tableCell{
+            height: 100% !important;
+        }
         .about .section{
             background-repeat: no-repeat;
             background-size: cover;
@@ -35,6 +39,16 @@
         .about .section:nth-child(5) .about-text{
             background-image: url("./images/about-img04.jpg");
         }
+        .about .section:first-child .right{
+            background-image: url("./images/about-imgright01.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .about .section:nth-child(4) .right{
+            background-image: url("./images/about-imgright02.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
 </head>
 <body>
@@ -52,7 +66,7 @@
                 <li><a href="agriculture.html">农业</a></li>
                 <li><a href="health.html">健康</a></li>
                 <li><a href="beauty.html">美业</a></li>
-                <li><a href="#">关于我们</a></li>
+                <li><a href="about.html">关于我们</a></li>
                 <li>
                     <div class="tel">
                         <img src="./images/img-01.png" >
@@ -88,8 +102,29 @@
                 </div>
                 <div class="right">
                     <div class="toback">
-                        <span>返回</span>
+                        <span>back</span>
                         <div class="line"></div>
+                    </div>
+                    <div class="con clearfix">
+                        <div class="video fl">
+                            <video src="./video/abs.webm" controls>
+                            </video>
+                        </div>
+                        <div class="sm fr">
+                            <ul>
+                                <li>
+                                    <h2>美国肽酶生物科技集团 ————</h2>
+                                    <p>美国肽酶生物科技集团，总部位于美国波士顿，是国际肽酶研究所（IPEI）旗下核心科研成果转化企业之一，专注肽和酶生物科学技术的应用及推广，服务于环保、农业、健康、美业四大领域，是一家集研发、生产、销售、教育于一体的大型生物科技集团。</p>
+                                    <p>依托国际肽酶研究所为主要技术支撑，集团已成功研发、生产出四大系列，一百多款产品，供应美国、德国、澳大利亚、中国、日本、韩国、中东、印度等全球50多个国家及地区。产品范围涵盖污水与油脂处理、水体修复、垃圾除臭、畜牧与水产养殖、农业种植、农产品处理、生物发酵、癌症与慢性病防治、两性健康、解酒护肝、健康管理、抗衰除皱、美白祛斑、生发袪痘、洗护除臭、家庭日化等，深受各领域专业机构与广大消费者青睐。</p>
+                                    <p>集团在全球设有多个生产基地，为环保、农业、健康、美业四大领域优质生产企业提供核心科技输出服务，帮助企业提升产品品质、增强产品市场竞争力；同时，也为全球有实力的渠道商提供品牌整体输出（OBM）服务，在战略规划、品牌管理、生产定制等方面进行全方位扶持，帮助其迅速占领市场。</p>
+                                    <p>集团始终致力于“让人类生活更美好”，以美国为中心，为全球服务，愿与世界各地合作伙伴携手，积极推动环境与农业可持续发展，努力提升人类健康水平，共同促进全球肽和酶科技进步。</p>
+                                </li>
+                                <li>
+                                    <h2>中国大陆地区业务机构 ————</h2>
+                                    <p>美国肽酶生物科技集团驻中国办事处，总部位于中国（上海）自由贸易试验区达尔文路88号，负责统筹中国大陆地区业务运作，同时，在北京、深圳、武汉设有分支机构，全面协调区域内战略合作、产品销售、技术支持与售后服务工作。更多详情，请咨询：china@pe-usa.com</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -127,6 +162,175 @@
                         <i></i>
                         <a href="#">查看更多</a>
                     </div>
+                    <div class="tomore">
+                        <span>discover</span>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="toback">
+                        <span>back</span>
+                        <div class="line"></div>
+                    </div>
+                    <div class="swiper-box">
+                        <div class="swiper-container hy-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <ul>
+                                        <li>
+                                            <div class="time">
+                                                <h2>20</h2>
+                                                <p>2018-10</p>
+                                            </div>
+                                            <div class="swiper-title">
+                                                <h2>环保行业升级，三大领域将迈向新阶段</h2>
+                                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方麦克拉温度没看到</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="time">
+                                                <h2>20</h2>
+                                                <p>2018-10</p>
+                                            </div>
+                                            <div class="swiper-title">
+                                                <h2>环保行业升级，三大领域将迈向新阶段</h2>
+                                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方麦克拉温度没看到</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="time">
+                                                <h2>20</h2>
+                                                <p>2018-10</p>
+                                            </div>
+                                            <div class="swiper-title">
+                                                <h2>环保行业升级，三大领域将迈向新阶段</h2>
+                                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方麦克拉温度没看到</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="time">
+                                                <h2>20</h2>
+                                                <p>2018-10</p>
+                                            </div>
+                                            <div class="swiper-title">
+                                                <h2>环保行业升级，三大领域将迈向新阶段</h2>
+                                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方麦克拉温度没看到</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="time">
+                                                <h2>20</h2>
+                                                <p>2018-10</p>
+                                            </div>
+                                            <div class="swiper-title">
+                                                <h2>环保行业升级，三大领域将迈向新阶段</h2>
+                                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方麦克拉温度没看到</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="time">
+                                                <h2>20</h2>
+                                                <p>2018-10</p>
+                                            </div>
+                                            <div class="swiper-title">
+                                                <h2>环保行业升级，三大领域将迈向新阶段</h2>
+                                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方麦克拉温度没看到</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide">
+                                    <ul>
+                                        <li>
+                                            <div class="time">
+                                                <h2>20</h2>
+                                                <p>2018-10</p>
+                                            </div>
+                                            <div class="swiper-title">
+                                                <h2>环保行业升级，三大领域将迈向新阶段</h2>
+                                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方麦克拉温度没看到</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="time">
+                                                <h2>20</h2>
+                                                <p>2018-10</p>
+                                            </div>
+                                            <div class="swiper-title">
+                                                <h2>环保行业升级，三大领域将迈向新阶段</h2>
+                                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方麦克拉温度没看到</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="time">
+                                                <h2>20</h2>
+                                                <p>2018-10</p>
+                                            </div>
+                                            <div class="swiper-title">
+                                                <h2>环保行业升级，三大领域将迈向新阶段</h2>
+                                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方麦克拉温度没看到</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide">
+                                    <ul>
+                                        <li>
+                                            <div class="time">
+                                                <h2>20</h2>
+                                                <p>2018-10</p>
+                                            </div>
+                                            <div class="swiper-title">
+                                                <h2>环保行业升级，三大领域将迈向新阶段</h2>
+                                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方麦克拉温度没看到</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="time">
+                                                <h2>20</h2>
+                                                <p>2018-10</p>
+                                            </div>
+                                            <div class="swiper-title">
+                                                <h2>环保行业升级，三大领域将迈向新阶段</h2>
+                                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方麦克拉温度没看到</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="time">
+                                                <h2>20</h2>
+                                                <p>2018-10</p>
+                                            </div>
+                                            <div class="swiper-title">
+                                                <h2>环保行业升级，三大领域将迈向新阶段</h2>
+                                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方麦克拉温度没看到</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                        <!-- 内容详情 -->
+                        <div class="details">
+                            <h2>环保行业升级，三大领域将迈向新阶段</h2>
+                            <p>
+                                <span>发布者：小编</span>
+                                <span>时间：2017-10-10</span>
+                                <span>浏览量：32</span>
+                            </p>
+                            <div class="details-con">
+                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方向；水污染治理已经过渡到了综合治理和流域治理阶段，形成体系；土壤污染治理则背靠刚刚发布的土壤污染防治法，可谓风头正盛。</p>
+                                <p>大气环保向限排升级我国粉尘和氮氧化物的主要排放源都是工业生产，分别占到了83%和71%。如果将工业领域进一步细分的话，电力(特别是火电)、钢铁和建材行业是排放烟粉尘和氮氧化物的主要行业。这三个行业占到所有工业这两项污染物排放的70%以上。为了实现减排的目标，2010年我国曾经执行了以拉闸限电为强制手段的限产行动。2015年之后，环保要求不断提高，限产也因为环保之名更加顺理成章，执行力度明显变强。2015-2017年的三年间，环保限产俨然已经成为京津冀等区域的常态。</p>
+                                <img src="./images/about-imgright03.jpg" >
+                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方向；水污染治理已经过渡到了综合治理和流域治理阶段，形成体系；土壤污染治理则背靠刚刚发布的土壤污染防治法，可谓风头正盛。</p>
+                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方向；水污染治理已经过渡到了综合治理和流域治理阶段，形成体系；土壤污染治理则背靠刚刚发布的土壤污染防治法，可谓风头正盛。</p>
+                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方向；水污染治理已经过渡到了综合治理和流域治理阶段，形成体系；土壤污染治理则背靠刚刚发布的土壤污染防治法，可谓风头正盛。</p>
+                                <p>近年来，环保形势不断发生变化，产业升级迈向新阶段。从当下形势来看，大气污染治理关乎减排目标的实现，一直是我国瞄准的重点方向；水污染治理已经过渡到了综合治理和流域治理阶段，形成体系；土壤污染治理则背靠刚刚发布的土壤污染防治法，可谓风头正盛。</p>
+                            </div>
+                            <div class="close"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -143,6 +347,37 @@
             </div>
         </div>
     </div>
+    <!-- 底部菜单 -->
+    <div class="about-menu">
+        <img src="./images/about-menu.png" class="img-menu">
+    </div>
+    <div class="menu-nav">
+        <div class="img">
+            <img src="./images/about-menu-img01.jpg" >
+        </div>
+        <div class="menu-title">
+            <h2>关于我们</h2>
+            <ul>
+                <li>
+                    <a href="#">1、公司简介</a>
+                </li>
+                <li>
+                    <a href="#">2、专家心得</a>
+                </li>
+                <li>
+                    <a href="#">3、国际权威机构</a>
+                </li>
+                <li>
+                    <a href="#">4、行业动态</a>
+                </li>
+                <li>
+                    <a href="#">5、集团新闻</a>
+                </li>
+            </ul>
+        </div>
+        <div class="close"></div>
+    </div>
+
     <div class="map">
         <img src="./images/img-09.jpg" >
     </div>
@@ -185,11 +420,27 @@
 </div>
 
 <script src="./js/jquery-1.8.3.min.js"></script>
+<script src="./js/swiper-4.2.2.min.js"></script>
 <script src="./js/fullpage.min.js"></script>
 <script src="js/public.js"></script>
 <script type="text/javascript">
  //JS代码部分
 $(function(){
+    var w = document.documentElement.clientWidth || document.body.clientWidth;
+    var h = document.documentElement.clientHeight || document.body.clientHeight;
+    window.onload = function(){
+        var headerH = $(".header").outerHeight();
+        var footerH = $(".about-menu").outerHeight();
+        //获取底部导航的高度
+        (function(){
+            var menuNav = h - headerH;
+            var sectionH = h - headerH - footerH;
+            $(".menu-nav").height(menuNav);
+            //自定义section的高度
+            $(".about .section").height(sectionH);
+        }())
+    }
+    
     //fullpage全屏滚动
     new fullpage('.about', {
         resize:true,
@@ -210,11 +461,45 @@ $(function(){
     $(".tomore").click(function(){
         $(this).parents(".about-con").find(".right").addClass("now");
         $(this).parents(".about-text").addClass("now");
+        $(document.body).height(h).width(w).css("overflow","hidden");
+        $(".toTop").hide();
     })
     $(".toback").click(function(){
         $(this).parents(".right").removeClass("now");
         $(this).parents(".right").prev(".about-text").removeClass("now");
-    })    
+        $(document.body).height('auto').width('auto').css("overflow","visible");
+        $(".toTop").show();
+    })
+    
+    //点击底部导航
+    $(".about-menu img").click(function(){
+        $(".menu-nav").addClass("now");
+    })
+    $(".menu-nav .close").click(function(){
+        $(".menu-nav").removeClass("now");
+    })
+
+
+
+    //行业动态swiper
+    var swiper1 = new Swiper('.hy-swiper', {
+        observer:true,
+        observeParents:true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+        },
+    });
+    //行业动态点击显示详情
+    $(".about .about-con .right .swiper-box ul li").click(function(){
+        $(".swiper-box .details").addClass("now");
+    })
+    $(".details .close").click(function(){
+        $(".swiper-box .details").removeClass("now");
+    })
 })
     
 

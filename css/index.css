@@ -156,7 +156,10 @@
 }
 .header .nav-box .list li .tel h3{
     font-size: 20px;
+}
+.header .nav-box .list li .tel h3 a{
     color: #fff;
+    text-align: center;
 }
 .header .nav-box .list.now li{
     opacity: 1;
@@ -191,7 +194,10 @@
     background-color: #fff;
     transition: background-color 0.3;
 }
-.header .nav-box .list li:active a{
+.header .nav-box .list li:last-child:active{
+    background-color: #0d0d0d;
+}
+.header .nav-box .list li:active>a{
     color: #0d0d0d;
 }
 .content{
@@ -870,6 +876,7 @@
     font-size: 14px;
     color: #fff;
     margin:0 15px;
+    text-transform: uppercase;
 }
 .about .about-con .about-text .tomore .line{
     display: block;
@@ -909,10 +916,11 @@
     cursor: pointer;
     flex-direction: row-reverse;
 }
-.about .about-con .right span{
+.about .about-con .right .toback span{
     font-size: 14px;
     color: #fff;
     margin:0 15px;
+    text-transform: uppercase;
 }
 .about .about-con .right .line{
     display: block;
@@ -925,6 +933,442 @@
 }
 .about .about-con .right .toback:hover .line{
     min-width: 40px;
+}
+.about .about-con .right .con{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-60%);
+    background-color: rgba(0,0,0,0.8);
+    overflow: hidden;
+}
+.about .about-con .right .con .video{
+    width: 40%;
+    margin-top: 8%;
+}
+.about .about-con .right .con .video video{
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+.about .about-con .right .con .sm{
+    width: 60%;
+    height: 100%;
+}
+.about .about-con .right .con .sm h2{
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.about .about-con .right .con .sm p{
+    font-size: 14px;
+    line-height: 26px;
+    color: #909090;
+}
+.about .about-con .right .con ul{
+    max-height: 90%;
+    overflow-y: auto;
+    width: 90%;
+    margin:0 auto;
+}
+.about .about-con .right .con ul::-webkit-scrollbar{
+    width:10px;
+    background-color:#0f0f0f;/* 整个滚条背景 */
+ }
+ .about .about-con .right .con ul::-webkit-scrollbar-thumb{
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    background-color:#2f2f2f; /* 滚条内嵌颜色 */
+ }
+.about-menu{
+    position: fixed;
+    left:0;
+    bottom:0;
+    z-index: 9;
+    background-color: #0d0d0d;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 100%;
+}
+.about-menu img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.menu-nav{
+    position: fixed;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background-color: #131313;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    transform: translateY(100%);
+    transition: transform 0.5s;
+}
+.menu-nav.now{
+    transform: translateY(0%);
+    transition: transform 0.5s;
+}
+.menu-nav .img{
+    width: 50%;
+}
+.menu-nav .img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.menu-nav .menu-title{
+    width: 50%;
+    padding: 15% 0 0 15%;
+}
+.menu-nav .menu-title h2{
+    font-size: 42px;
+    color: #fff;
+    position: relative;
+    margin-bottom: 40px;
+}
+.menu-nav .menu-title h2::after{
+    position: absolute;
+    content:'';
+    left:0;
+    bottom:-10px;
+    width: 20%;
+    height: 1px;
+    background-color: #fff;
+}
+.menu-nav .menu-title a{
+    font-size: 28px;
+    color: #6c6c6c;
+}
+.menu-nav .menu-title li{
+    height: 50px;
+    line-height: 50px;
+}
+.menu-nav .close{
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: .3;
+    transition: opacity .5s cubic-bezier(.445,.05,.55,.95);
+    cursor: pointer;
+}
+.menu-nav .close::before{
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 100%;
+    width: 2px;
+    background-color: #fff;
+    transition: background-color .3s cubic-bezier(.39,.575,.565,1);
+    transform: rotate(45deg);
+}
+.menu-nav .close::after{
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 100%;
+    width: 2px;
+    background-color: #fff;
+    transition: background-color .3s cubic-bezier(.39,.575,.565,1);
+    transform: rotate(-45deg);
+}
+.about .about-con .right .swiper-box{
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.about .about-con .right .swiper-box ul{
+    display: flex;
+    display: -webkit-flex;
+    display:-moz-flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.about .about-con .right .swiper-box ul li{
+    width: 48%;
+    display: flex;
+    display: -webkit-flex;
+    display:-moz-flex;
+    align-items: center;
+    background-color: #030303;
+    border:1px solid #1b1b1b;
+    margin-bottom: 40px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.about .about-con .right .swiper-box .time{
+    width: 100px;
+    height: 125px;
+    background-color: #0d0d0d;
+    display: flex;
+    display: -webkit-flex;
+    display:-moz-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-right: 30px;
+}
+.about .about-con .right .swiper-box .time h2{
+    font-size: 40px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+.about .about-con .right .swiper-box .time p{
+    font-size: 14px;
+    color: #fff;
+}
+.about .about-con .right .swiper-box .swiper-title{
+    flex-grow: 1;
+    min-width: 0;
+}
+.about .about-con .right .swiper-box .swiper-title h2{
+    font-size: 20px;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.about .about-con .right .swiper-box .swiper-title p{
+    font-size: 14px;
+    line-height: 26px;
+    color: #888;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.about .about-con .right .swiper-box .swiper-container{
+    padding-bottom: 60px;
+}
+.about .about-con .right .swiper-box .swiper-pagination-bullet{
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #0d0d0d;
+}
+.about .about-con .right .swiper-box .swiper-pagination-bullet-active{
+    background-color: #303030;
+}
+.about .about-con .right .swiper-box .details{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    z-index: 9;
+    background-color: transparent;
+    transition: background-color .8s cubic-bezier(.445,.05,.55,.95) 0s;
+    opacity: 0;
+    overflow-y: auto;
+    padding: 30px;
+    display: none;
+}
+.about .about-con .right .swiper-box .details.now{
+    background-color:#0d0d0d;
+    opacity: 1;
+    display: block;
+}
+.about .about-con .right .swiper-box .details::-webkit-scrollbar{
+    width:10px;
+    background-color:#0f0f0f;/* 整个滚条背景 */
+ }
+ .about .about-con .right .swiper-box .details::-webkit-scrollbar-thumb{
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    background-color:#2f2f2f; /* 滚条内嵌颜色 */
+ }  
+.about .about-con .right .swiper-box .details h2{
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+.about .about-con .right .swiper-box .details>p{
+    text-align: center;
+    color: #4f4f4f;
+    font-size: 14px;
+    margin: 15px 0;
+}
+.about .about-con .right .swiper-box .details>p span{
+    margin-right: 10px;
+}
+.about .about-con .right .swiper-box .details>p span:last-child{
+    margin-right: 0;
+}
+.about .about-con .right .swiper-box .details .details-con{
+    padding: 30px 0;
+    border-top:1px solid #2b2b2b;
+    border-bottom:1px solid #2b2b2b;
+}
+.about .about-con .right .swiper-box .details .details-con p{
+    font-size: 14px;
+    color: #6c6c6c;
+    line-height: 24px;
+}
+.about .about-con .right .swiper-box .details .details-con img{
+    width: 570px;
+    display: block;
+    margin:25px auto;
+}
+.about .about-con .right .swiper-box .details .close{
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: .3;
+    transition: opacity .5s cubic-bezier(.445,.05,.55,.95);
+    cursor: pointer;
+}
+.about .about-con .right .swiper-box .details .close::before{
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 100%;
+    width: 2px;
+    background-color: #fff;
+    transition: background-color .3s cubic-bezier(.39,.575,.565,1);
+    transform: rotate(45deg);
+}
+.about .about-con .right .swiper-box .details .close::after{
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 100%;
+    width: 2px;
+    background-color: #fff;
+    transition: background-color .3s cubic-bezier(.39,.575,.565,1);
+    transform: rotate(-45deg);
+}
+/**联系我们**/
+.contact-us .title{
+    height: 240px;
+    line-height: 240px;
+    text-align: center;
+    background-color: #1e1e1e;
+    font-size: 36px;
+    color: #fff;
+}
+.contact-us .to-message{
+    background-color: #0d0d0d;
+    padding: 90px 0;
+}
+.contact-us .to-message .box{
+    width: 100%;
+    max-width: 660px;
+    margin:0 auto;
+    border-top:1px solid #252525;
+}
+.contact-us .to-message .box h2{
+    font-size: 16px;
+    color: #ccc;
+    height: 70px;
+    line-height: 70px;
+    cursor: pointer;
+    position: relative;
+}
+.contact-us .to-message .box h2 i{
+    position: absolute;
+    right:7px;
+    top:50%;
+    font-size: 22px;
+    transition: transform .5s ease;
+    transform: translateY(-50%) rotateX(0deg);
+    transform-origin: 50% 50%;
+}
+.contact-us .to-message .box h2.now i{
+    transform: translateY(-50%) rotateX(180deg);
+}
+.contact-us .to-message .box>li{
+    border-bottom:1px solid #252525;
+}
+.contact-us .to-message .box>li .contact-message{
+    padding-bottom: 25px;
+    display: none;
+}
+.contact-us .to-message .box>li .contact-message p{
+    font-size: 14px;
+    color: #8a8a8a;
+    line-height: 24px;
+    padding-left: 20px;
+}
+.contact-us .to-message .box>li .contact-message li{
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    align-items: flex-start;
+    border-bottom:1px solid #191919;
+}
+.contact-us .to-message .box>li .contact-message li span{
+    font-size: 14px;
+    color: #b1b1b1;
+    height: 64px;
+    line-height: 64px;
+    flex-shrink: 0;
+}
+.contact-us .to-message .box>li .contact-message li input{
+    background-color: transparent;
+    border:none;
+    resize: none;
+    outline: none;
+    height: 64px;
+    line-height: 64px;
+    flex-grow:1;
+    font-size: 16px;
+    color: #fff;
+}
+.contact-us .to-message .box>li .contact-message li textarea{
+    background-color: transparent;
+    border:none;
+    resize: none;
+    outline: none;
+    height: 100px;
+    font-size: 16px;
+    color: #fff;
+    flex-grow: 1;
+    padding: 10px;
+}
+.contact-us .to-message .box>li .contact-message button{
+    display: block;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border:1px solid #8c8c8c;
+    margin:30px auto 0;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 14px;
+    color: #b1b1b1;
+    transition: background .3s ease;
+}
+.contact-us .to-message .box>li .contact-message button:hover{
+    background: #fff;
+    color: #000;
 }
 @media (min-width: 1400px){
 
@@ -1044,6 +1488,37 @@
     }
     .pro-details .pro-text p{
         font-size: 20px;
+    }
+    /**关于页面**/
+    .about .about-con .right .con .sm h2{
+        font-size: 20px;
+    }
+    .about-menu{
+        height: 60px;
+    }
+    .about-menu img{
+        width: 30px;
+        height: 30px;
+    }
+    .about .about-con .right .con ul{
+        padding: 30px 0;
+    }
+    .about .about-con .about-text .box h2{
+        font-size: 24px;
+        line-height: 35px;
+    }
+    .about .about-con .about-text .box p{
+        font-size: 20px;
+    }
+    .about .about-con .about-text .box i{
+        width: 200px;
+        margin: 35px auto;
+    }
+    .menu-nav .menu-title h2{
+        font-size: 26px;
+    }
+    .menu-nav .menu-title a{
+        font-size: 22px;
     }
 }
 @media(max-width:991px){
