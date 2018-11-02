@@ -26,7 +26,7 @@ $(function(){
         $(".pro-list .list li").eq(i).css("transition-delay",i * 0.1+"s");
     }
     $(document).ready(function(){
-        var a,b,c,d,e;
+        var a,b,c,d,e,f;
         a=$(window).height();
         b = 0;
         d = 0;
@@ -48,6 +48,22 @@ $(function(){
                 }
                 else{
                     $(this).find(".envir-text").removeClass('animated bounceInRight');
+                }
+            });
+            //美业动画
+            $(".beauty .section").each(function(){
+                f = $(this).find("div:first-child").offset().top;
+                if(a+b>f){
+                    if($(this).index() == 3){
+                        $(this).find(".beauty-text").addClass('animated bounceInLeft');
+                    }else{
+                        $(this).find(".beauty-text").addClass('animated bounceInRight');
+                    }
+                    $(".beauty .section").eq(0).find(".beauty-text").removeClass('animated bounceInRight');
+                    
+                }
+                else{
+                    $(this).find(".beauty-text").removeClass('animated bounceInRight bounceInLeft');
                 }
             });
 

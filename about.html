@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" id="boss">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -49,6 +49,7 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+        
     </style>
 </head>
 <body>
@@ -70,7 +71,7 @@
                 <li>
                     <div class="tel">
                         <img src="./images/img-01.png" >
-                        <h3>联系我们</h3>
+                        <h3><a href="contact_us.html">联系我们</a></h3>
                     </div>
                     <p>Contact us</p>
                 </li>
@@ -107,7 +108,7 @@
                     </div>
                     <div class="con clearfix">
                         <div class="video fl">
-                            <video src="./video/abs.webm" controls>
+                            <video src="./video/Comp.Ogg" controls>
                             </video>
                         </div>
                         <div class="sm fr">
@@ -461,17 +462,28 @@ $(function(){
     //点击右侧与查看更多
     $(".tomore").click(function(){
         fullpage_api.fitToSection();
+        var index = $(this).parents(".section").index();
+        $(this).parents(".about").find(".section").eq(index).show().siblings().hide();
         $(this).parents(".about-con").find(".right").addClass("now");
         $(this).parents(".about-text").addClass("now");
+        $("#boss").height(h).width(w).css("overflow","hidden");
         $(document.body).height(h).width(w).css("overflow","hidden");
         $(".toTop").hide();
     })
 
     $(".toback").click(function(){
+        $(this).parents(".about").find(".section").show();
+        var index = $(this).parents(".section").index() + 1;
+        fullpage_api.silentMoveTo(index);
+        fullpage_api.fitToSection();
+        
         $(this).parents(".right").removeClass("now");
         $(this).parents(".right").prev(".about-text").removeClass("now");
+        $("#boss").height('auto').width('auto').css("overflow","visible");
         $(document.body).height('auto').width('auto').css("overflow","visible");
         $(".toTop").show();
+        
+
     })
     
     //点击底部导航

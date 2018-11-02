@@ -121,7 +121,6 @@
     padding-top: 80px;
 }
 .header .nav-box .list li{
-    height: 70px;
     line-height: 70px;
     padding-left: 25px;
     border-bottom:1px solid #2b2b2b;
@@ -549,15 +548,35 @@
 .toTop i{
     margin-left: 2px;
 }
-/* 环保 */
+/* 环保与美业 */
 .envir .section .envir-text{
     position: absolute;
     top:20%;
     left: 50%;
     transform: translateX(-50%);
 }
+.beauty .section .beauty-text{
+    position: absolute;
+    top:30%;
+    left: 70%;
+    transform: translateX(-50%);
+}
 .envir .section:nth-child(n+2) .envir-text{
     top:30%;
+    max-width: 400px;
+    width: 100%;
+    transform: translateX(0%);
+}
+.beauty .section:nth-child(n+2) .beauty-text{
+    top:25%;
+    left: 60%;
+    max-width: 400px;
+    width: 100%;
+    transform: translateX(0%);
+}
+.beauty .section:nth-child(4) .beauty-text{
+    top:25%;
+    left:15%;
     max-width: 400px;
     width: 100%;
     transform: translateX(0%);
@@ -569,10 +588,39 @@
     top:0;
     height: 100%;
 }
+.beauty .section:last-child .beauty-text{
+    max-width: 100%;
+    width: 100%;
+    left:0;
+    top:0;
+    height: 100%;
+}
 .envir .section .envir-text .title{
     text-align: center;
     font-size: 70px;
     color: #fff;
+}
+.beauty .section .beauty-text .title{
+    text-align: center;
+    font-size: 34px;
+    color:#fff;
+    position: relative;
+    margin-bottom: 15px;
+}
+.beauty .section .beauty-text .f-title{
+    text-align: center;
+    font-size: 18px;
+    color:#fff;
+}
+.beauty .section .beauty-text .title::after{
+    content:'';
+    position: absolute;
+    width: 32%;
+    height: 1px;
+    background-color: #fff;
+    left:50%;
+    bottom:-5px;
+    transform: translate(-50%,0);
 }
 .envir .section .envir-text .con{
     text-align: center;
@@ -580,7 +628,13 @@
     color: #fff;
     text-transform: uppercase;
 }
-.envir .section .envir-text i{
+.beauty .section .beauty-text .con{
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.envir .section .envir-text i,.beauty .section .beauty-text i{
     display: block;
     width: 265px;
     height: 1px;
@@ -593,8 +647,17 @@
     height: 70px;
     line-height: 70px;
     margin-bottom: 25px;
+    position: relative;
 }
-.envir .section .envir-text h2 span{
+.beauty .section .beauty-text h2{
+    font-size: 34px;
+    color: #fff;
+    height: 70px;
+    line-height: 70px;
+    margin-bottom: 25px;
+    text-align: center
+}
+.envir .section .envir-text h2 span,.beauty .section .beauty-text h2 span{
     position: relative;
 }
 .envir .section .envir-text h2 span::after{
@@ -606,12 +669,28 @@
     width: 100%;
     height: 1px;
 }
-.envir .section .envir-text>p{
+.beauty .section .beauty-text h2 span::after{
+    content: '';
+    position: absolute;
+    left:50%;
+    bottom:-25px;
+    background-color: #fff;
+    width: 40%;
+    height: 1px;
+    transform: translate(-50%,0%);
+}
+.envir .section .envir-text p{
     font-size: 16px;
     color: #fff;
     line-height: 28px;
 }
-.envir .section .envir-text h1{
+.beauty .section .beauty-text p{
+    font-size: 16px;
+    color: #fff;
+    line-height: 28px;
+    text-align: center;
+}
+.envir .section .envir-text h1,.beauty .section .envir-text h1{
     position: absolute;
     left:50%;
     top:50%;
@@ -628,7 +707,7 @@
     color: #fff;
     text-align: center;
 }
-.envir .section .envir-text ul{
+.envir .section .envir-text ul,.beauty .section .envir-text ul{
     position: absolute;
     top:0;
     left:0;
@@ -636,13 +715,13 @@
     height: 100%;
     z-index: 9;;
 }
-.envir .section .envir-text ul li h3{
+.envir .section .envir-text ul li h3,.beauty .section .envir-text ul li h3{
     font-size: 18px;
     color: #fff;
     line-height: 28px;
     margin-bottom: 15px;
 }
-.envir .section .envir-text ul li p{
+.envir .section .envir-text ul li p,.beauty .section .envir-text ul li p{
     font-size: 18px;
     color: #fff;
     line-height: 28px;
@@ -652,36 +731,36 @@
     -webkit-line-clamp: 3;
     height: 84px;
 }
-.envir .section .envir-text ul li{
+.envir .section .envir-text ul li,.beauty .section .envir-text ul li{
     position: absolute;
     width: 100%;
     max-width: 480px;
 }
-.envir .section .envir-text ul li:first-child{
+.envir .section .envir-text ul li:first-child,.beauty .section .envir-text ul li:first-child{
     right:15%;
     top:10%;
 }
-.envir .section .envir-text ul li:nth-child(2){
+.envir .section .envir-text ul li:nth-child(2),.beauty .section .envir-text ul li:nth-child(2){
     right:10%;
     top:40%;
 }
-.envir .section .envir-text ul li:nth-child(3){
+.envir .section .envir-text ul li:nth-child(3),.beauty .section .envir-text ul li:nth-child(3){
     right:15%;
     top:70%;
 }
-.envir .section .envir-text ul li:nth-child(4){
+.envir .section .envir-text ul li:nth-child(4),.beauty .section .envir-text ul li:nth-child(4){
     left:15%;
     top:10%;
 }
-.envir .section .envir-text ul li:nth-child(5){
+.envir .section .envir-text ul li:nth-child(5),.beauty .section .envir-text ul li:nth-child(5){
     left:10%;
     top:40%;
 }
-.envir .section .envir-text ul li:nth-child(6){
+.envir .section .envir-text ul li:nth-child(6),.beauty .section .envir-text ul li:nth-child(6){
     left:15%;
     top:70%;
 }
-.envir .section .envir-text ul li:nth-child(n+4) h3{
+.envir .section .envir-text ul li:nth-child(n+4) h3,.beauty .section .envir-text ul li:nth-child(n+4) h3{
     text-align: right;
 }
 .pro-list{
@@ -1385,6 +1464,92 @@
 
 }
 @media (max-width: 1400px){
+    /**美业与其他模块**/
+    .envir .section .envir-text ul li h3, .beauty .section .envir-text ul li h3{
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 5px;
+    }
+    .envir .section .envir-text ul li p, .beauty .section .envir-text ul li p{
+        line-height: 20px;
+        font-size: 14px;
+        -webkit-line-clamp: 3;
+        height: 60px;
+    }
+    .envir .section .envir-text h1, .beauty .section .envir-text h1{
+        font-size: 24px;
+        width: 160px;
+        height: 160px;
+        margin-left: -80px;
+        margin-top: -80px;
+        line-height: 160px;
+    }
+    .envir .section .envir-text ul li:first-child, .beauty .section .envir-text ul li:first-child{
+        right: 10%;
+        top: 20%;
+    }
+    .envir .section .envir-text ul li:nth-child(2), .beauty .section .envir-text ul li:nth-child(2){
+        right: 5%;
+        top: 45%;
+    }
+    .envir .section .envir-text ul li:nth-child(3), .beauty .section .envir-text ul li:nth-child(3){
+        right: 10%;
+        top: 70%;
+    }
+    .envir .section .envir-text ul li:nth-child(4), .beauty .section .envir-text ul li:nth-child(4){
+        left: 10%;
+        top: 20%;
+    }
+    .envir .section .envir-text ul li:nth-child(5), .beauty .section .envir-text ul li:nth-child(5) {
+        left: 5%;
+        top: 45%;
+    }
+    .envir .section .envir-text ul li:nth-child(6), .beauty .section .envir-text ul li:nth-child(6) {
+        left: 10%;
+        top: 70%;
+    }
+    /**产品列表页**/
+    .pro-list .list{
+        width: 90%;
+    }
+    .pro-list .list li{
+        width: 25%;
+        margin-right: 10%;
+        margin-bottom: 80px;
+    }
+    .pro-list .list li .box h2 {
+        font-size: 22px;
+        margin: 10px 0;
+    }
+    .pro-list .list li .box p {
+        line-height: 20px;
+    }
+    .pro-list>h2 {
+        font-size: 30px;
+        height: 180px;
+        line-height: 180px;
+    }
+    /**左侧导航**/
+    .header .nav-box .list li .tel{
+        padding-top: 40px;
+    }
+    .header .nav-box .list li .tel img {
+        margin: 0 auto 15px;
+    }
+    /**关于我们**/
+    .about-menu{
+        height: 100px;
+    }
+    .about .about-con .about-text .box h2{
+        font-size: 50px;
+    }
+    .about .about-con .about-text .box p{
+        font-size: 26px;
+    }
+    .about .about-con .right .swiper-box ul li{
+        margin-bottom: 20px;
+        padding: 10px 15px;
+    }
 }
 @media(max-width:1199px){
 
@@ -1418,7 +1583,7 @@
         padding-top: 60px;
         top:0;
     }
-    .envir .section .envir-text h1{
+    .envir .section .envir-text h1,.beauty .section .envir-text h1{
         position: static;
         width: 100%;
         height: 50px;
@@ -1430,7 +1595,7 @@
         margin-bottom: 60px;
         font-size: 32px;
     }
-    .envir .section .envir-text ul{
+    .envir .section .envir-text ul,.beauty .section .envir-text ul{
         position: static;
         height: auto;
         display: flex;
@@ -1441,25 +1606,48 @@
         padding: 0 25px;
         justify-content: space-between;
     }
-    .envir .section .envir-text ul li{
+    .envir .section .envir-text ul li,.beauty .section .envir-text ul li{
         position: static;
         margin-bottom: 40px;
         max-width: 450px;
     }
-    .envir .section .envir-text ul li:nth-child(n+4) h3{
+    .envir .section .envir-text ul li:nth-child(n+4) h3,.beauty .section .envir-text ul li:nth-child(n+4) h3{
         text-align: left;
     }
-    .envir .section .envir-text ul li h3{
+    .envir .section .envir-text ul li h3,.beauty .section .envir-text ul li h3{
         font-size: 16px;
     }
-    .envir .section .envir-text ul li p{
+    .envir .section .envir-text ul li p,.beauty .section .envir-text ul li p{
         font-size: 16px;
     }
     .envir .section .envir-text .title{
-        font-size: 55px;
+        font-size: 34px;
+        line-height: 1.2;
+    }
+    .beauty .section .beauty-text .title{
+        font-size: 34px;
+        line-height: 1.2;
     }
     .envir .section .envir-text .con{
         font-size: 28px;
+    }
+    .beauty .section .beauty-text .con{
+        font-size: 20px;
+    }
+    .beauty .section .beauty-text .f-title{
+        font-size: 20px;
+    }
+    .beauty .section .beauty-text{
+        top: 25%;
+        left: 80%;
+    }
+    .beauty .section:nth-child(n+2) .beauty-text{
+        top: 15%;
+        left: 55%;
+    }
+    .beauty .section:nth-child(4) .beauty-text{
+        left:15%;
+        top:15%;
     }
     /* 环保列表 */
     .pro-list .list{
@@ -1549,6 +1737,11 @@
     .about .about-con .right .swiper-box .time h2{
         font-size: 28px;
     }
+    /**关于我们模块**/
+    .contact-us .title{
+        height: 180px;
+        line-height: 180px;
+    }
 }
 @media(max-width:991px){
 
@@ -1592,6 +1785,22 @@
     .envir .section .envir-text ul li p{
         height: 56px;
         -webkit-line-clamp: 2;
+    }
+    .beauty .section .beauty-text{
+        left:50%;
+    }
+    .beauty .section:nth-child(n+2) .beauty-text{
+        left:23%;
+    }
+    .beauty .section:last-child .envir-text {
+        padding-top: 50px;
+    }
+    .beauty .section .envir-text h1 {
+        margin-bottom: 40px;
+    }
+    .beauty .section .envir-text ul li {
+        max-width: 100%;
+        margin-bottom: 25px;
     }
     /**产品列表页**/
     .pro-list>h2 {
@@ -1660,9 +1869,14 @@
         color: #fff;
         opacity: 0.8;
     }
+    
 }
 
 @media(max-width:767px){
+    /**首页去掉视频**/
+    #fullpage .section video{
+        display: none;
+    }
     #navmenu a{
         height: 10px;
         width: 10px;
@@ -1803,6 +2017,49 @@
     .envir .section .envir-text ul li h3{
         margin-bottom: 0;
     }
+    .beauty .section .beauty-text .title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    .beauty .section .beauty-text .con {
+        font-size: 16px;
+    }
+    .beauty .section .beauty-text .f-title{
+        font-size: 16px;
+    }
+    .beauty .section:nth-child(n+2) .beauty-text {
+        width: 90%;
+        left: 5%;
+        top: 15%;
+    }
+    .beauty .section .beauty-text h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    .beauty .section .envir-text h1{
+        font-size: 20px;
+        margin-bottom: 15px;
+        height: 35px;
+        line-height: 35px;
+    }
+    .beauty .section:last-child .envir-text{
+        padding-top: 25px;
+    }
+    .beauty .section .envir-text ul li h3 {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 0;
+    }
+    .beauty .section .envir-text ul li p {
+        font-size: 16px;
+        height: 40px;
+        line-height: 20px;
+        -webkit-line-clamp: 2;
+        font-size: 14px;
+    }
+    .beauty .section .envir-text ul li{
+        margin-bottom: 15px;
+    }
     /* 底部 */
     .footer-nav p{
         width: 90%;
@@ -1923,7 +2180,35 @@
         font-size: 16px;
     }
     .about .about-con .right .swiper-box{
-        align-items: flex-end;
+        align-items:flex-start;
+        position: absolute;
+        left: 50%;
+        top: 7%;
+        transform: translate(-50%,0);
+    }
+    /**关于我们**/
+    .contact-us .title{
+        height: 80px;
+        line-height: 80px;
+        font-size: 22px;
+    }
+    .contact-us .to-message .box{
+        width: 90%;
+    }
+    .contact-us .to-message .box h2{
+        height: 50px;
+        line-height: 50px;
+    }
+    .contact-us .to-message .box h2 i{
+        font-size: 16px;
+    }
+    .contact-us .to-message .box>li .contact-message li input{
+        height: 45px;
+        line-height: 45px;
+    }
+    .contact-us .to-message .box>li .contact-message li span{
+        height: 45px;
+        line-height: 45px;
     }
 }
 @media(max-width:640px){
@@ -2040,6 +2325,15 @@
     }
     .pro-details .box .con h2{
         margin-bottom: 0;
+    }
+    /**美业**/
+    .beauty .section .beauty-text h2{
+        font-size: 25px;
+        line-height: 35px;
+        height: 35px;
+    }
+    .beauty .section .beauty-text h2 span::after{
+        bottom:-12px;
     }
 }
 @media(max-width:374px){
