@@ -41,8 +41,23 @@
         .envir .section:nth-child(7){
             background-image: url("./images/img-35.jpg");
         }
-        .envir .section:last-child{
+        /* .envir .section:last-child{
             background-image: url("./images/img-29.jpg");
+        } */
+        @media(max-width:1024px){
+            .envir .section{
+                background-position: 42% 0%;
+            }
+            .envir .section:nth-child(n+2) .envir-text{
+                left:60%;
+                max-width: 350px;
+            }
+        }
+        @media(max-width:768px){
+            .envir .section:nth-child(n+2) .envir-text {
+                left: 0;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -84,47 +99,52 @@
         <div class="section">
             <div class="envir-text">
                 <div class="title">健康</div>
-                <div class="con">health products</div>
                 <i></i>
+                <div class="s-title">生命力量 自然彰显</div>
+                <div class="con">health products</div>
+                
             </div>
         </div>
         <div class="section">
             <div class="envir-text">
                 <a href="product_list.html">
-                <h2><span>补肾壮阳</span></h2>
-                <p>纯粹野生环境的名贵纯天然药材，刺激睾酮激素。提升精子数量和肌力，保护前列腺和动脉，固元培本，强身壮体。</p>
+                <h2><span>男人·昂然立世</span></h2>
+                <p>天然植物精炼，微生物复合酶，助你重现男性魅力，重塑自信风范。</p>
                 </a>
             </div>
         </div>
         <div class="section">
             <div class="envir-text">
                 <a href="product_list.html">
-                <h2><span>解酒护肝</span></h2>
-                <p>生物技术添加，纯天然无害，提高饲料转化率及消化率，减少环境污染。</p>
+                <h2><span>品“胃”·量如江海</span></h2>
+                <p>营养素和微生物发酵酶，主动拦截酒精，肝脏神盾，觥筹交错之间，“肚”量尽显</p>
                 </a>
             </div>
         </div>
         <div class="section">
             <div class="envir-text">
                 <a href="product_list.html">
-                <h2><span>防癌抗衰</span></h2>
-                <p>名贵药用菌菇培元固本，生物酶活性成分清除毒素，修复细胞系统，提高人体免疫力。激发生命活力，强劲生命动力。</p>
+                <h2><span>生命·破译长寿密码</span></h2>
+                <p>药用菌菇的固元功效，修复免疫系统，微生物酶激活细胞，助力生命引擎。</p>
                 </a>
             </div>
         </div>
         <div class="section">
             <div class="envir-text">
                 <a href="product_list.html">
-                <h2><span>滋阴调理</span></h2>
-                <p>提炼的神奇酶及中草药复合配方，调节女性荷尔蒙,延缓更年期，保养卵巢和治疗妇科疾病。</p>
+                <h2><span>女性·韵味永存</span></h2>
+                <p>气血双补，润泽延更，于自然中焕活感觉，于活力中释放激情。</p>
                 </a>
             </div>
         </div>
         <div class="section">
             <div class="envir-text">
                 <a href="product_list.html">
-                <h2><span>健康独到</span></h2>
-                <p>特效生物酶及中草药复合配方，高效创新，安全无毒，辅以酶催化剂, 靶向催化分解富余脂肪，平衡脂肪生成。</p>
+                <h2><span>独到之处</span></h2>
+                <p>前沿科技，立足全球</p>
+                <p>植物精粹，安全无毒</p>
+                <p>神奇酶法，即速高效</p>
+                <p>自然之源，内调外延</p>
                 </a>
             </div>
         </div>
@@ -136,7 +156,7 @@
                 </a>
             </div>
         </div> -->
-        <div class="section">
+        <!-- <div class="section">
             <div class="envir-text">
                 <h1>六大优势</h1>
                 <ul>
@@ -166,7 +186,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="map">
         <img src="./images/img-09.jpg" >
@@ -194,7 +214,7 @@
                 <a href="#">相关企业</a>
             </li>
             <li>
-                <a href="#">隐私条款和网站声明</a>
+                <a href="customer-care-privterms.html">隐私条款和网站声明</a>
             </li>
         </ul>
         <p>© 2018 La IPEI - 保留所有权利     ICP备案号：沪ICP备16012378号</p>

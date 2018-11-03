@@ -80,10 +80,11 @@
     bottom:-9px;
 }
 .header .nav .menu::after{
-    content:'menu';
+    content:'导航';
     position:absolute;
     left:55px;
     top:13px;
+    width: 50px;
 }
 .header .nav .menu .line{
     background: #b5b5b5;
@@ -289,9 +290,9 @@
 }
 .section .text a{
     display: block;
-    max-width: 250px;
+    max-width: 200px;
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -562,7 +563,8 @@
     transform: translateX(-50%);
 }
 .envir .section:nth-child(n+2) .envir-text{
-    top:30%;
+    top:25%;
+    left:65%;
     max-width: 400px;
     width: 100%;
     transform: translateX(0%);
@@ -581,20 +583,14 @@
     width: 100%;
     transform: translateX(0%);
 }
-.envir .section:last-child .envir-text{
+
+/* .beauty .section:last-child .beauty-text{
     max-width: 100%;
     width: 100%;
     left:0;
     top:0;
     height: 100%;
-}
-.beauty .section:last-child .beauty-text{
-    max-width: 100%;
-    width: 100%;
-    left:0;
-    top:0;
-    height: 100%;
-}
+} */
 .envir .section .envir-text .title{
     text-align: center;
     font-size: 70px;
@@ -626,7 +622,7 @@
     text-align: center;
     font-size: 30px;
     color: #fff;
-    text-transform: uppercase;
+    text-transform:capitalize;
 }
 .beauty .section .beauty-text .con{
     text-align: center;
@@ -634,7 +630,19 @@
     color: #fff;
     text-transform: uppercase;
 }
-.envir .section .envir-text i,.beauty .section .beauty-text i{
+.envir .section .envir-text i{
+    display: block;
+    width: 265px;
+    height: 1px;
+    background-color: #808080;
+    margin:0 auto 20px;
+}
+.envir .section .envir-text .s-title{
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+.beauty .section .beauty-text i{
     display: block;
     width: 265px;
     height: 1px;
@@ -648,6 +656,7 @@
     line-height: 70px;
     margin-bottom: 25px;
     position: relative;
+    text-align: center;
 }
 .beauty .section .beauty-text h2{
     font-size: 34px;
@@ -683,6 +692,7 @@
     font-size: 16px;
     color: #fff;
     line-height: 28px;
+    text-align: center;
 }
 .beauty .section .beauty-text p{
     font-size: 16px;
@@ -690,7 +700,7 @@
     line-height: 28px;
     text-align: center;
 }
-.envir .section .envir-text h1,.beauty .section .envir-text h1{
+/* .envir .section .envir-text h1,.beauty .section .envir-text h1{
     position: absolute;
     left:50%;
     top:50%;
@@ -706,22 +716,22 @@
     line-height: 218px;
     color: #fff;
     text-align: center;
-}
-.envir .section .envir-text ul,.beauty .section .envir-text ul{
+} */
+/* .envir .section .envir-text ul,.beauty .section .envir-text ul{
     position: absolute;
     top:0;
     left:0;
     width: 100%;
     height: 100%;
     z-index: 9;;
-}
-.envir .section .envir-text ul li h3,.beauty .section .envir-text ul li h3{
+} */
+/* .envir .section .envir-text ul li h3,.beauty .section .envir-text ul li h3{
     font-size: 18px;
     color: #fff;
     line-height: 28px;
     margin-bottom: 15px;
-}
-.envir .section .envir-text ul li p,.beauty .section .envir-text ul li p{
+} */
+/* .envir .section .envir-text ul li p,.beauty .section .envir-text ul li p{
     font-size: 18px;
     color: #fff;
     line-height: 28px;
@@ -730,25 +740,25 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     height: 84px;
-}
-.envir .section .envir-text ul li,.beauty .section .envir-text ul li{
+} */
+/* .envir .section .envir-text ul li,.beauty .section .envir-text ul li{
     position: absolute;
     width: 100%;
     max-width: 480px;
-}
-.envir .section .envir-text ul li:first-child,.beauty .section .envir-text ul li:first-child{
+} */
+/* .envir .section .envir-text ul li:first-child,.beauty .section .envir-text ul li:first-child{
     right:15%;
     top:10%;
-}
-.envir .section .envir-text ul li:nth-child(2),.beauty .section .envir-text ul li:nth-child(2){
+} */
+/* .envir .section .envir-text ul li:nth-child(2),.beauty .section .envir-text ul li:nth-child(2){
     right:10%;
     top:40%;
-}
-.envir .section .envir-text ul li:nth-child(3),.beauty .section .envir-text ul li:nth-child(3){
+} */
+/* .envir .section .envir-text ul li:nth-child(3),.beauty .section .envir-text ul li:nth-child(3){
     right:15%;
     top:70%;
-}
-.envir .section .envir-text ul li:nth-child(4),.beauty .section .envir-text ul li:nth-child(4){
+} */
+/* .envir .section .envir-text ul li:nth-child(4),.beauty .section .envir-text ul li:nth-child(4){
     left:15%;
     top:10%;
 }
@@ -759,10 +769,10 @@
 .envir .section .envir-text ul li:nth-child(6),.beauty .section .envir-text ul li:nth-child(6){
     left:15%;
     top:70%;
-}
-.envir .section .envir-text ul li:nth-child(n+4) h3,.beauty .section .envir-text ul li:nth-child(n+4) h3{
+} */
+/* .envir .section .envir-text ul li:nth-child(n+4) h3,.beauty .section .envir-text ul li:nth-child(n+4) h3{
     text-align: right;
-}
+} */
 .pro-list{
     background-color: #0d0d0d;
 }
@@ -1371,7 +1381,7 @@
     border-top:1px solid #252525;
 }
 .contact-us .to-message .box h2{
-    font-size: 16px;
+    font-size: 20px;
     color: #ccc;
     height: 70px;
     line-height: 70px;
@@ -1456,6 +1466,24 @@
 .contact-us .to-message .box>li .contact-message button:hover{
     background: #fff;
     color: #000;
+}
+.contact-us .to-message .box>li .contact-message .box{
+    padding: 15px 20px 0;
+}
+.contact-us .to-message .box>li .contact-message .box p{
+    font-size: 16px;
+    color: #fff;
+    line-height: 22.5px;
+    padding-bottom:10px;
+    padding-left: 0;
+}
+.contact-us .to-message .box>li .contact-message .box h2{
+    font-size: 20px;
+    color: #fff;
+    line-height: 28px;
+    height: auto;
+    padding-bottom:10px;
+    padding-top: 10px;
 }
 @media (min-width: 1400px){
 
@@ -1577,7 +1605,8 @@
     }
     /* 环保 */
     .envir .section:nth-child(n+2) .envir-text{
-        top:34%;
+        top:15%;
+        left:55%;
     }
     .envir .section:last-child .envir-text{
         padding-top: 60px;
@@ -1622,13 +1651,20 @@
     }
     .envir .section .envir-text .title{
         font-size: 34px;
-        line-height: 1.2;
+        line-height: 1.5;
+    }
+    .envir .section .envir-text i{
+        margin: 5px auto 10px;
+        width:150px;
     }
     .beauty .section .beauty-text .title{
         font-size: 34px;
         line-height: 1.2;
     }
     .envir .section .envir-text .con{
+        font-size: 28px;
+    }
+    .envir .section .envir-text .s-title{
         font-size: 28px;
     }
     .beauty .section .beauty-text .con{
@@ -1749,13 +1785,16 @@
 @media (max-width: 768px){
     /* 环保 */
     .envir .section .envir-text .title{
-        font-size: 40px;
+        font-size: 30px;
     }
     .envir .section .envir-text .con{
         font-size: 20px;
     }
     .envir .section .envir-text i{
-        margin: 35px auto 0;
+        margin: 5px auto 10px;
+    }
+    .envir .section .envir-text .s-title{
+        font-size: 20px;
     }
     .envir .section .envir-text{
         top:30%;
@@ -1869,7 +1908,13 @@
         color: #fff;
         opacity: 0.8;
     }
-    
+    /**版权**/
+    .contact-us .to-message .box h2{
+        font-size: 13px;
+    }
+    .contact-us .to-message .box h2 i{
+        font-size: 14px;
+    }
 }
 
 @media(max-width:767px){
@@ -1979,7 +2024,7 @@
         font-size: 16px;
     }
     .envir .section .envir-text i{
-        margin: 30px auto 0;
+        margin: 5px auto 10px;
     }
     .envir .section:nth-child(n+2) .envir-text{
         max-width: 100%;
@@ -2334,6 +2379,17 @@
     }
     .beauty .section .beauty-text h2 span::after{
         bottom:-12px;
+    }
+    /**版权**/
+    .contact-us .to-message .box>li .contact-message .box h2{
+        font-size: 17px;
+    }
+    .contact-us .to-message .box>li .contact-message .box{
+        padding: 0;
+    }
+    .contact-us .to-message .box>li .contact-message .box p{
+        font-size: 14px;
+        line-height: 20px;
     }
 }
 @media(max-width:374px){
