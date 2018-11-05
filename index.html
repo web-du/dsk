@@ -26,6 +26,8 @@
             height: 100%;
             background-attachment: fixed;
             position: relative;
+            background-repeat: no-repeat;
+            background-position: center 0;
         }
         #fullpage .section video{
             position: absolute;
@@ -37,39 +39,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-        /* #fullpage .section:first-child{
-            background-image:url("./images/new-img06.jpg");
-            overflow: hidden;
-        } */
-        #fullpage .section:first-child:before{
-            content: ' ';
-            position: fixed;
-            z-index: -1;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: url("./images/new-img06.jpg") center 0 no-repeat;
-            background-size: cover;
-        }
-        #fullpage .section:nth-child(2){
-            background-image:url("./images/img-04.jpg");
-        }
-        #fullpage .section:nth-child(3){
-            background-image:url("./images/new-img02.jpg");
-        }
-        #fullpage .section:nth-child(4){
-            background-image:url("./images/new-img04.jpg");
-        }
-        #fullpage .section:nth-child(5){
-            background-image:url("./images/new-img05.jpg");
-        }
-        #fullpage .section:nth-child(6){
-            background-image:url("./images/img-07.jpg");
-        }
-        #fullpage .section:nth-child(7){
-            background-image:url("./images/img-08.jpg");
         }
     </style>
 </head>
@@ -131,7 +100,7 @@
         </li>
     </ul>
     <div id="fullpage">
-        <div class="section">
+        <div class="section" style="background-image:url('./images/new-img06.jpg')">
             <div class="text">
                 <h2>美国肽酶生物科技集团</h2>
                 <p>Peptide & Enzyme Biotechnologies Group Inc</p>
@@ -142,7 +111,7 @@
                 <source  src="./video/Comp.Ogg">
             </video>
         </div>
-        <div class="section">
+        <div class="section" style="background-image:url('./images/img-04.jpg')">
             <div class="text">
                 <h2>环保</h2>
                 <p>Environment</p>
@@ -150,7 +119,7 @@
                 <a href="environmental_protection.html">立即探索</a>
             </div>
         </div>
-        <div class="section">
+        <div class="section" style="background-image:url('./images/new-img02.jpg')">
             <div class="text">
                 <h2>农业</h2>
                 <p>Agriculture</p>
@@ -158,7 +127,7 @@
                 <a href="agriculture.html">立即探索</a>
             </div>
         </div>
-        <div class="section">
+        <div class="section" style="background-image:url('./images/new-img04.jpg')">
             <div class="text">
                 <h2>健康</h2>
                 <p>Healthcare</p>
@@ -166,7 +135,7 @@
                 <a href="health.html">立即探索</a>
             </div>
         </div>
-        <div class="section">
+        <div class="section" style="background-image:url('./images/new-img05.jpg')">
             <div class="text">
                 <h2>美业</h2>
                 <p>Beauty</p>
@@ -174,16 +143,20 @@
                 <a href="beauty.html">立即探索</a>
             </div>
         </div>
-        <div class="section">
+        <div class="section" style="background-image:url('./images/img-07.jpg')">
             <div class="text">
                 <h2>美国肽酶生物科技集团</h2>
                 <p>Peptide & Enzyme Biotechnologies Group Inc</p>
                 <i></i>
-                <div class="con">美国肽酶生物科技集团，是IPEI旗下核心科研成果转化企业之一，服务于环保、农业、健康、美业四大领域，总部位于美国波士顿，是一家集研发、生产、销售、教育于一体的大型生物科技集团。</div>
+                <div class="con">
+                    <p>美国肽酶生物科技集团，是IPEI旗下核心科研成果转化企业之一，服务于环保、农业、健康、美业四大领域，总部位于美国波士顿，是一家集研发、生产、销售、教育于一体的大型生物科技集团。</p>
+                    <p>依托国际肽酶研究所为主要技术支撑，集团已成功研发、生产出四大系列，一百多款产品，供应美国、德国、澳大利亚、中国、日本、韩国、中东、印度等全球50多个国家及地区。</p>
+                    <p>集团始终致力于“让人类生活更美好”，以美国为中心，为全球服务，愿与世界各地合作伙伴携手，积极推动环境与农业可持续发展，努力提升人类健康水平，共同促进全球肽和酶科技进步。</p>
+                </div>
                 <a href="#">立即探索</a>
             </div>
         </div>
-        <div class="section">
+        <div class="section" style="background-image:url('./images/img-08.jpg')">
             <div class="text">
                 <h2>联系我们</h2>
                 <p>Contact us</p>
