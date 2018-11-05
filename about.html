@@ -1088,15 +1088,11 @@ $(function(){
     //fullpage全屏滚动
     new fullpage('.about', {
         resize:true,
+        animateAnchor:false,
         slidesNavigation: true,
-        scrollingSpeed: 700,
-		parallaxOptions: {
-			type: 'cover',
-			percentage: 100,
-			property: 'translate',
-		},
 		autoScrolling:false,
-		scrollBar: false,
+        scrollBar: false,
+        fitSection:false,
 		fitToSection:false,
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
     });
@@ -1126,14 +1122,20 @@ $(function(){
     function close(obj){
         $(obj).parents(".about").find(".section").show();
         var index = $(obj).parents(".section").index() + 1;
-        fullpage_api.silentMoveTo(index);
-        fullpage_api.fitToSection();
+        
+        
+        
         
         $(obj).parents(".right").removeClass("now");
         $(obj).parents(".right").prev(".about-text").removeClass("now");
         $("#boss").height('auto').width('auto').css("overflow","visible");
         $(document.body).height('auto').width('auto').css("overflow","visible");
         $(".toTop").show();
+        
+
+        fullpage_api.setScrollingSpeed(35);
+        fullpage_api.silentMoveTo(index);
+        fullpage_api.fitToSection();
     }
 
     //点击底部导航
