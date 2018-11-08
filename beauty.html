@@ -24,25 +24,6 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-        /* @media(max-width:768px){
-            /**美业图片**/
-            /* .beauty .section:nth-child(2){
-                background-image: url("../images/img-36s.jpg");
-                background-position: left bottom;
-            }
-            .beauty .section:nth-child(3){
-                background-image: url("../images/img-37s.jpg");
-                background-position: left 68%;
-            }
-            .beauty .section:nth-child(4){
-                background-image: url("../images/img-38s.jpg");
-                background-position: left bottom;
-            }
-            .beauty .section:nth-child(5){
-                background-image: url("../images/img-39s.jpg");
-                background-position: left bottom;
-            } */
-        /*} */
     </style>
 </head>
 <body>
@@ -89,6 +70,7 @@
             </div>
         </div>
         <div class="section" style="background-image: url('./images/img-36.jpg')">
+            <img src="./images/img-36s.jpg" class="mo" >
             <div class="beauty-text">
                 <a href="product_list.html">
                 <h2><span>臻爱铂钻</span></h2>
@@ -97,6 +79,7 @@
             </div>
         </div>
         <div class="section" style="background-image: url('./images/img-37.jpg')">
+            <img src="./images/img-37s.jpg" class="mo" >
             <div class="beauty-text">
                 <a href="product_list.html">
                 <h2><span>晶致肌活</span></h2>
@@ -105,6 +88,7 @@
             </div>
         </div>
         <div class="section" style="background-image: url('./images/img-38.jpg')">
+            <img src="./images/img-38s.jpg" class="mo" >
             <div class="beauty-text">
                 <a href="product_list.html">
                 <h2><span>洁净焕肤</span></h2>
@@ -113,6 +97,7 @@
             </div>
         </div>
         <div class="section" style="background-image: url('./images/img-39.jpg')">
+            <img src="./images/img-39s.jpg" class="mo" >
             <div class="beauty-text">
                 <a href="product_list.html">
                 <h2><span>全身呵护</span></h2>
@@ -206,10 +191,10 @@ $(function(){
         document.documentElement.style.fontSize=scw/7.5+'px';
 
         if(scw <= 768){
-            $(".beauty .section").eq(1).css({"background-image":"url('./images/img-36s.jpg')","background-position":"left bottom"});
-            $(".beauty .section").eq(2).css({"background-image":"url('./images/img-37s.jpg')","background-position":"left 68%"});
-            $(".beauty .section").eq(3).css({"background-image":"url('./images/img-38s.jpg')","background-position":"left bottom"});
-            $(".beauty .section").eq(4).css({"background-image":"url('./images/img-39s.jpg')","background-position":"left bottom"});
+            $(".beauty .section").eq(1).css({"background-image":"none"});
+            $(".beauty .section").eq(2).css({"background-image":"none"});
+            $(".beauty .section").eq(3).css({"background-image":"none"});
+            $(".beauty .section").eq(4).css({"background-image":"none"});
         }
 })
     

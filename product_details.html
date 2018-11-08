@@ -18,18 +18,6 @@
     <style>
         html{
             overflow-x: hidden;
-            overflow-y: auto;
-        }
-        .pro-details .section{
-            background-image: url("./images/img-21.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .pro-details .section:nth-child(2){
-            background-color: #0d0d0d;
-        }
-        .pro-details .section:nth-child(3){
-            background-image: url("./images/img-22.jpg");
         }
     </style>
 </head>
@@ -68,29 +56,15 @@
 <!--content开始-->
 <div class="content">
     <div class="pro-details">
-        <div class="section">
-            <div class="box section1">
-                <img src="./images/img-23.png" >
-                <div class="con">
-                    <h2>抗衰修复产品1</h2>
-                    <p>肌因级修护，强化肌肤自身修护力，紧弹亮润释放年轻！</p>
-                </div>
-            </div>
+        <div class="pc">
+            <img src="./images/new-details-img01.jpg" >
+            <img src="./images/new-details-img02.jpg" >
+            <img src="./images/new-details-img03.jpg" >
         </div>
-        <div class="section">
-            <div class="pro-text section1">
-                <h2>塑造无痕美肌</h2>
-                <p>开启抗皱护理仪典。柔和泡沫洁面膏(50ml)遇水起泡可净化舒缓肌肤，令肌肤清爽嫩滑。滋润爽肤水(60ml)不含酒精成分，可舒缓及柔化肌肤，同时清洁和收缩毛孔。亮颜修护抗皱精华(50ml)让肌肤实现看得见的嫩滑，更显年轻光彩。</p>
-            </div>
-        </div>
-        <div class="section">
-            <div class="box section1">
-                <div class="con">
-                    <h2>抗衰修复产品1</h2>
-                    <p>肌因级修护，强化肌肤自身修护力，紧弹亮润释放年轻！</p>
-                </div>
-                <img src="./images/img-23.png" >
-            </div>
+        <div class="mo">
+            <img src="./images/new-details-simg01.jpg" >
+            <img src="./images/new-details-simg02.jpg" >
+            <img src="./images/new-details-simg03.jpg" >
         </div>
     </div>
 </div>
@@ -137,24 +111,6 @@
 <script type="text/javascript">
  //JS代码部分
 $(function(){
-     
-    //fullpage全屏滚动
-    new fullpage('.pro-details', {
-        resize:true,
-        slidesNavigation: true,
-        scrollingSpeed: 700,
-		parallaxOptions: {
-			type: 'cover',
-			percentage: 100,
-			property: 'translate',
-		},
-		autoScrolling: false,
-		scrollBar: false,
-		fitToSection:false,
-        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
-    });
-
-    
 })
     
 
