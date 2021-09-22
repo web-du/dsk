@@ -1,0 +1,30 @@
+CACHE MANIFEST
+# 1.0.0 2021-9-22 17:25
+
+CACHE
+./css/animate.min.css
+./css/base.css
+./css/fullpage.min.css
+./css/index.css
+./css/swiper-4.2.2.min.css
+./images/img-01.png
+./images/logo.png
+./images/down.png
+./images/img-09.jpg
+./images/img-10.png
+./images/img-11.png
+./images/img-12.png
+./images/new-img06.jpg
+./images/img-04.jpg
+./images/new-img02.jpg
+./images/new-img04.jpg
+./images/new-img05.jpg
+./images/img-07.jpg
+./images/img-08.jpg
+./video/Comp.Ogg
+
+NETWORK:
+*
+
+
+FALLBACK:
